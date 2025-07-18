@@ -1,2 +1,28 @@
-/bodaga
-  index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA Intranet Portal</title>
+<style>body{margin:0;font-family:'Courier New',Courier,monospace;background-color:#0b0e1c;color:#d0d0d0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh}header{width:100%;padding:1rem;background-color:#141824;display:flex;align-items:center;justify-content:center;flex-direction:column}header img{max-width:100px;margin-bottom:0.5rem}h1{margin:0;font-size:1.5rem;color:#00b0c0}main{padding:2rem;max-width:600px;text-align:center}a{display:block;color:#00b0c0;margin:1rem 0;font-size:1.1rem;text-decoration:none;border:1px solid #00b0c0;padding:0.5rem;border-radius:4px;transition:background 0.3s}a:hover{background-color:#00b0c0;color:#0b0e1c}footer{padding:1rem;font-size:0.8rem;color:#555}</style>
+</head>
+<body onload="document.getElementById('sfx').play();">
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA Secure Intranet Portal</h1>
+</header>
+<main>
+  <p>Welcome. Please select a division to access classified resources:</p>
+  <a href="https://cnw.neetocode.com/site/chris-d-2/01K06YD7Q7HSZJDJZX2R1J1R3D" onclick="playBeep();">Operations Division</a>
+  <a href="https://cnw.neetocode.com/site/chris-d-2/01K06RRTQV1023S2BS6HGVN859" onclick="playBeep();">Intelligence & Analysis Division</a>
+  <a href="https://cnw.neetocode.com/site/chris-d-2/01JZWSVFBEX2KZC7A6SS7E560G" onclick="playBeep();">Research Division</a>
+  <a href="#" onclick="playBeep(); return false;">Logistics & Engineering</a>
+  <a href="#" onclick="playBeep(); return false;">HR</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>function playBeep(){let audio=document.getElementById('sfx');audio.currentTime=0;audio.play();}</script>
+</body>
+</html>
