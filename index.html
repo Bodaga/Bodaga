@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>APA Secure Intranet Portal</title>
 <style>
+    <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+    <script>
+function playBeep() {
+    const audio = document.getElementById('sfx');
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
+
+// Attach to all links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', playBeep);
+});
+</script>
     body {
         margin: 0;
         font-family: 'Courier New', Courier, monospace;
