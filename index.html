@@ -69,21 +69,20 @@
 </footer>
 
 <!-- ADD BEEP FUNCTIONALITY -->
-<audio id="sfx" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
 function playBeep() {
     const audio = document.getElementById('sfx');
     if (audio) {
         audio.currentTime = 0;
-        audio.play();
+        audio.play().catch(e => { console.log("Audio play blocked", e); });
     }
 }
-
-// Attach beep to all links
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', playBeep);
 });
 </script>
+
 </body>
 </html>
 
