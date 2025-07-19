@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA INTERNAL PORTAL – INTELLIGENCE & ANALYSIS DIVISION</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+}
+main {
+    padding: 2rem;
+    max-width: 700px;
+}
+h2 {
+    color: #00b0c0;
+    margin-top: 1rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+ul li {
+    margin: 0.5rem 0;
+}
+a.link, a.back {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+a.link:hover, a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+}
+footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA INTERNAL PORTAL: INTELLIGENCE & ANALYSIS DIVISION</h1>
+</header>
+<main>
+    <p>Welcome, Analyst. Please select a dossier or action below for intelligence operations tracking and review.</p>
+
+    <h2>ACTIVE SURVEILLANCE DIRECTIVES</h2>
+    <ul>
+        <li>Veil Breach Monitoring: Egypt, Cambodia, Ireland</li>
+        <li>Sons of Aether Tracking: London, Cairo Cells</li>
+        <li>OotV Observations: UK and EU contacts</li>
+        <li>Magical Incident Watchlist: Global</li>
+    </ul>
+
+    <h2>ACTION</h2>
+    <a href="submit_activity_report.html" class="link">Submit Activity Report</a>
+
+    <h2>ACTIVE THREAT DOSSIERS</h2>
+    <a href="soa.html" class="link">Sons of Aether</a>
+    <a href="ootv.html" class="link">Order of the Veil</a>
+    <a href="arcane_syndicate.html" class="link">Arcane Syndicate</a>
+    <a href="deep_ones.html" class="link">'Deep Ones'</a>
+
+    <h2>UNALIGNED MAGICAL ACTORS</h2>
+    <a href="wilhelm.html" class="link">Subject: "WILHELM"</a>
+    <a href="nesbitt.html" class="link">Subject: "NESBIT"</a>
+    <a href="dalton.html" class="link">Subject: "DALTON"</a>
+    <a href="holly.html" class="link">Subject: "HOLLY"</a>
+
+    <h2>REQUESTS</h2>
+    <a href="file_media_suppression.html" class="link">File Media Suppression Request</a>
+    <a href="submit_humint_sigint.html" class="link">Submit HUMINT / SIGINT Report</a>
+
+    <a href="index.html" class="back">&larr; Return to Portal Home</a>
+</main>
+<footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+
+<!-- BEEP AUDIO + SCRIPT -->
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+function playBeep() {
+    const audio = document.getElementById('sfx');
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', playBeep);
+});
+</script>
+</body>
+</html>
