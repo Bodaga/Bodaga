@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA INTERNAL PORTAL – OPERATIONS DIVISION</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+}
+main {
+    padding: 2rem;
+    max-width: 700px;
+}
+h2 {
+    color: #00b0c0;
+    margin-top: 1rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+ul li {
+    margin: 0.5rem 0;
+}
+a.back, a.link {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+a.back:hover, a.link:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+}
+footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA INTERNAL PORTAL: OPERATIONS DIVISION</h1>
+</header>
+<main>
+    <h2>CURRENT PRIORITY MISSIONS</h2>
+    <ul>
+        <li>Containment Operations: Egypt Veil Breach Site</li>
+        <li>Recovery Mission: Artifact ECHO-7 (Egypt Ritual Circle)</li>
+        <li>Deep One Coastal Reconnaissance (Ireland)</li>
+    </ul>
+
+    <h2>SUPPRESSION PROTOCOLS ACTIVE</h2>
+    <ul>
+        <li>London: Tier 1</li>
+        <li>Cairo: Tier 4</li>
+        <li>Mildura: Tier 1</li>
+        <li>Upington: Tier 1</li>
+    </ul>
+
+    <div>
+        <a href="post_op_report.html" class="link">Submit Post-Op Reports</a>
+        <a href="request_extraction.html" class="link">Request Extraction or Containment Support</a>
+        <a href="file_incident.html" class="link">File Incident</a>
+        <a href="request_coordination.html" class="link">Request Cross-Division Coordination</a>
+        <a href="equipment_resupply.html" class="link">Equipment Resupply or Repair Ticket</a>
+    </div>
+    <a href="index.html" class="back">&larr; Return to Portal Home</a>
+</main>
+<footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+
+<!-- BEEP AUDIO + SCRIPT -->
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+function playBeep() {
+    const audio = document.getElementById('sfx');
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
+
+// Attach beep to all links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', playBeep);
+});
+</script>
+</body>
+</html>
