@@ -58,7 +58,7 @@
 </header>
 <main>
     <p>Welcome. Please select a division to access classified resources:</p>
-    <a href="operations.html">Operations Division</a>
+    <a href="operations.html"onclick="playBeep()">Operations Division</a>
     <a href="intelligence.html">Intelligence & Analysis Division</a>
     <a href="research.html">Research Division</a>
     <a href="logistics.html">Logistics & Engineering</a>
@@ -75,7 +75,7 @@ function playBeep() {
     const audio = document.getElementById('sfx');
     if (audio) {
         audio.currentTime = 0;
-        audio.play().catch(e => { console.log("Audio play blocked", e); });
+        audio.play();
     }
 }
 document.querySelectorAll('a').forEach(link => {
