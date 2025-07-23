@@ -109,18 +109,43 @@ footer {
 <!-- BEEP AUDIO + SCRIPT -->
 <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
-function playBeep() {
+function playBeepAndNavigate(e) {
+    e.preventDefault(); // Stop the browser from navigating immediately
+
     const audio = document.getElementById('sfx');
+    const link = e.currentTarget.getAttribute('href');
+
     if (audio) {
         audio.currentTime = 0;
-        audio.play();
+        audio.play().then(() => {
+            // Wait until beep finishes, or just delay a bit
+            setTimeout(() => {
+                window.location.href = link;
+            }, 300); // delay in milliseconds (~length of the beep)
+        }).catch((err) => {
+            // Fallback if autoplay fails (e.g., browser blocks sound)
+            window.location.href = link;
+        });
+    } else {
+        // No audio element found, navigate immediately
+        window.location.href = link;
     }
 }
 
-// Attach beep to all links
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', playBeep);
+// Reattach event listeners
+function attachAudioListeners() {
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.removeEventListener('click', playBeepAndNavigate);
+        link.addEventListener('click', playBeepAndNavigate);
+    });
+}
+
+attachAudioListeners();
+
+window.addEventListener('pageshow', function () {
+    attachAudioListeners();
 });
 </script>
+    
 </body>
 </html>
