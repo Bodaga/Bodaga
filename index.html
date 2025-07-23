@@ -58,7 +58,7 @@
 </header>
 <main>
     <p>Welcome. Please select a division to access classified resources:</p>
-    <a href="operations.html"onclick="playBeep()">Operations Division</a>
+    <a href="operations.html">Operations Division</a>
     <a href="intelligence.html">Intelligence & Analysis Division</a>
     <a href="research.html">Research Division</a>
     <a href="logistics.html">Logistics & Engineering</a>
@@ -67,19 +67,33 @@
 <footer>
     APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
 </footer>
-
+    
 <!-- BEEP AUDIO + SCRIPT -->
 <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
-function playBeep() {
+function playBeep(e) {
     const audio = document.getElementById('sfx');
     if (audio) {
         audio.currentTime = 0;
         audio.play();
     }
 }
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', playBeep);
+
+// Function to reattach event listeners
+function attachAudioListeners() {
+    document.querySelectorAll('a').forEach(link => {
+        // Remove existing to prevent double binding
+        link.removeEventListener('click', playBeep);
+        link.addEventListener('click', playBeep);
+    });
+}
+
+// Attach on normal load
+attachAudioListeners();
+
+// Attach on bfcache restore (e.g., using back button)
+window.addEventListener('pageshow', function (event) {
+    attachAudioListeners();
 });
 </script>
 
