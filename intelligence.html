@@ -113,19 +113,37 @@ footer {
     APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
 </footer>
 
-<!-- BEEP AUDIO + SCRIPT -->
-<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
-function playBeep() {
-    const audio = document.getElementById('sfx');
-    if (audio) {
-        audio.currentTime = 0;
-        audio.play();
+    function setupBeep() {
+        const audio = document.getElementById('sfx');
+
+        function playBeep() {
+            if (audio) {
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play().catch(e => {
+                    console.log("Audio play blocked", e);
+                });
+            }
+        }
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.removeEventListener('click', playBeep); // clean up old
+            el.addEventListener('click', playBeep);
+        });
     }
-}
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', playBeep);
-});
+
+    // Normal load
+    document.addEventListener('DOMContentLoaded', setupBeep);
+
+    // Fix for back button restoring from bfcache
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            console.log("Page restored from bfcache");
+        }
+        setupBeep();
+    });
 </script>
+
 </body>
 </html>
