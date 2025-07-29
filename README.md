@@ -16,7 +16,6 @@
 - [View](https://bodaga.github.io/Bodaga/research.html)
 - [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
 
-## 📘 Docs
-- [Intro](docs/intro.md)
-- [Setup](docs/setup.md)
-- [Auth Features](docs/features/auth.md)
+    ## 📘 Docs
+    - [View](https://bodaga.github.io/Bodaga/research.html)
+    - [Code](https://github.com/Bodaga/Bodaga/blob/main/MaterialSciences.html)
