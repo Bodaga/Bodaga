@@ -21,3 +21,13 @@
 - [📘 Biological Aberration Studies](https://bodaga.github.io/Bodaga/biological_aberration_studies.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/biological_aberration_studies.html)
 - [📘 Cognitive Effects and Indoctrination](https://bodaga.github.io/Bodaga/cognitive_effects.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/cognitive_effects.html)
 - [📘 Artifact Recovery and Deconstruction](https://bodaga.github.io/Bodaga/artifact_recovery.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/artifact_recovery.html)
+[CURRENT PRIORITY PROJECTS]
+- [📘 Project FELIX](https://bodaga.github.io/Bodaga/project_felix.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/project_felix.html)
+- [📘 Behavioral Consistency Threshold](https://bodaga.github.io/Bodaga/behavioral_threshold.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/behavioral_threshold.html)
+- [📘 Priest Field Test - Phase II](https://bodaga.github.io/Bodaga/priest_field_test.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/priest_field_test.html)
+- [📘 Subject Saturation Efficiency](https://bodaga.github.io/Bodaga/subject_saturation_efficiency.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/subject_saturation_efficiency.html)
+
+
+[SUPPORT SERVICES]
+Site Logistics & Engineering
+Internal Security Clearance Requests
