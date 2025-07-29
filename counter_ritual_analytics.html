@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APA INTERNAL PORTAL – Ritual Circle Status Assessment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #00b0c0;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      margin-left: 1rem;
+    }
+    a.button-link {
+      color: #00b0c0;
+      text-decoration: none;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>APA RESEARCH BRIEF – RITUAL CIRCLE STATUS ASSESSMENT</h1>
+
+  <section>
+    <h2>OVERVIEW</h2>
+    <p>The APA monitors known and suspected ritual circle sites globally to assess veil stability, potential breach risk, and hostile faction interference. While the Order of the Veil traditionally guards these sites, current APA assessments reflect independent analysis and ongoing intelligence gathering.</p>
+  </section>
+
+  <section>
+    <h2>KNOWN AND SUSPECTED SITES</h2>
+    <ul>
+      <li><strong>Stonehenge (UK):</strong> Stable. OotV presence confirmed. Site alert raised during Stonehenge Incident, status under watch with no active breach noted.</li>
+      <li><strong>Cairo Site:</strong> Former Blackout Alert, Currently Stable. Under APA containment operations. </li>
+      <li><strong>Uluru Site:</strong> Stable. Active APA experiment underway.</li>
+      <li><strong>SE Asia Site (Cambodia – Suspected):</strong> Exact location unknown. Presumed Stable. Mana level analysis indicates likely presence within Cambodian territory. Intelligence incomplete, site status unknown.</li>
+      <li><strong>South American Site:</strong> Stable. Location known, no current APA interventions. Stability assumed but unverified. Under passive surveillance for signs of activation or breach attempts.</li>
+      <li><strong>Central America Site:</strong> Location unconfirmed, all APA location attempts disrupted under suspicious circumstances. Status unknown, hostile interference.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>APA POSITION</h2>
+    <p>Ritual circles represent potential veil breach vectors and large-scale magical activation risks. Continued monitoring, experimentation, and potential containment actions are prioritized to prevent hostile use and to maintain veil integrity.</p>
+  </section>
+
+  <!-- Beep link button -->
+  <a class="button-link" href="research-division.html">&larr; Return to Research Division</a>
+
+  <!-- BEEP AUDIO + SCRIPT -->
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <script>
+    function playBeepAndNavigate(e) {
+      e.preventDefault(); // Stop the browser from navigating immediately
+
+      const audio = document.getElementById('sfx');
+      const link = e.currentTarget.getAttribute('href');
+
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().then(() => {
+          setTimeout(() => {
+            window.location.href = link;
+          }, 300); // Length of beep
+        }).catch(() => {
+          window.location.href = link;
+        });
+      } else {
+        window.location.href = link;
+      }
+    }
+
+    function attachAudioListeners() {
+      document.querySelectorAll('a[href]').forEach(link => {
+        link.removeEventListener('click', playBeepAndNavigate);
+        link.addEventListener('click', playBeepAndNavigate);
+      });
+    }
+
+    attac
