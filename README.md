@@ -10,6 +10,7 @@
 - [📘 View](https://bodaga.github.io/Bodaga/intelligence.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
 
 ## 🧩 Research
+[SUBDIVISIONS]
 - [📘 View](https://bodaga.github.io/Bodaga/research.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
 - [📘 Theoretical Thaumatolog](https://bodaga.github.io/Bodaga/theoretical_thaumatology.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/theoretical_thaumatology.html)
 - [📘 Arcane Containment](https://bodaga.github.io/Bodaga/arcane_containment.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/arcane_containment.html)
