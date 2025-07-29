@@ -4,7 +4,13 @@
 - [📘 View](https://bodaga.github.io/Bodaga/) & [Code](https://github.com/Bodaga/Bodaga/blob/main/index.html)
 
 ## 🧩 Operations
-- [📘 View](https://bodaga.github.io/Bodaga/operations.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+- [📘 View](https://bodaga.github.io/Bodaga/operations.html) & [Code](operations.html)
+- [📘 Submit Post-Op Reports](https://bodaga.github.io/Bodaga/post_op_report.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+- [📘 Request Extraction or Containment Support](https://bodaga.github.io/Bodaga/post_op_report.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+- [📘 Submit Post-Op Reports](https://bodaga.github.io/Bodaga/post_op_report.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+- [📘 Submit Post-Op Reports](https://bodaga.github.io/Bodaga/post_op_report.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+- [📘 Submit Post-Op Reports](https://bodaga.github.io/Bodaga/post_op_report.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+-   File Incident Request Cross-Division Coordination Equipment Resupply or Repair Ticket
 
 ## 🧩 Intelligence
 - [📘 View](https://bodaga.github.io/Bodaga/intelligence.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
