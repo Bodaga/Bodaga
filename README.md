@@ -9,7 +9,7 @@
 - [📘 Request Extraction or Containment Support](https://bodaga.github.io/Bodaga/request_extraction.html) & [Code](request_extraction.html)
 - [📘 File Incident Request](https://bodaga.github.io/Bodaga/file_incident.html) & [Code](file_incident.html)
 - [📘 Cross-Division Coordination](https://bodaga.github.io/Bodaga/request_coordination.html) & [Code](request_coordination.html)
-- [📘 Equipment Resupply or Repair Ticket](https://bodaga.github.io/Bodaga/equipment_resupply.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/equipment_resupply.html)/
+- [📘 Equipment Resupply or Repair Ticket](https://bodaga.github.io/Bodaga/equipment_resupply.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/equipment_resupply.html)
   
 
 ## 🧩 Intelligence
