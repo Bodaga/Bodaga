@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Saturation Efficiency</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <section class="document">
+      <h1>File 3: “Subject Saturation Efficiency”</h1>
+      <p><strong>APA Technical White Paper (Excerpt)</strong></p>
+      <p><strong>Prepared for:</strong> Internal Arcane Metrics Review Panel</p>
+
+      <blockquote>
+        <p>The Subject Saturation Efficiency (SSE) index is a composite measure indicating the percentage of a civilian test population demonstrating persistent magical influence post-agent dispersion.</p>
+
+        <p>Current SSE rates for Site V12-A exceed prior models, reaching a <strong>stable 72.4%</strong> in Zone Blue and <strong>59.1%</strong> in Zone Green.</p>
+
+        <p>SSE success is largely contingent on:</p>
+        <ul>
+          <li>Fluoride-binding catalysts in primary water intake</li>
+          <li>Sub-auditory suggestion via utility infrastructure</li>
+          <li>Use of spiritual intermediaries (see: Field Test - Phase II)</li>
+        </ul>
+
+        <p><strong>Red Flags:</strong></p>
+        <ul>
+          <li>SSE drops below 40% are correlated with spontaneous subject-driven rebellion or ritual interference.</li>
+        </ul>
+
+        <p><strong>Actionable Recommendation:</strong> Transfer key research out pending confirmation of non APA magical activity within region - See File .</p>
+
+        <p><strong>Classification:</strong> &mdash; Eyes Only &mdash; No External Transmission</p>
+      </blockquote>
+    </section>
+
+    <nav class="return-link">
+      <a href="/research.html">&larr; Return to Research</a>
+    </nav>
+  </main>
+
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <script>
+    function playBeepAndNavigate(e) {
+        e.preventDefault();
+        const audio = document.getElementById('sfx');
+        const link = e.currentTarget.getAttribute('href');
+        if (audio) {
+            audio.currentTime = 0;
+            audio.play().then(() => {
+                setTimeout(() => {
+                    window.location.href = link;
+                }, 300);
+            }).catch(() => {
+                window.location.href = link;
+            });
+        } else {
+            window.location.href = link;
+        }
+    }
+
+    function attachAudioListeners() {
+        document.querySelectorAll('a[href]').forEach(link => {
+            link.removeEventListener('click', playBeepAndNavigate);
+            link.addEventListener('click', playBeepAndNavigate);
+        });
+    }
+
+    attachAudioListeners();
+    window.addEventListener('pageshow', attachAudioListeners);
+  </script>
+</body>
+</html>
