@@ -1,124 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>APA INTERNAL PORTAL – Material Sciences: Anti-Magic Composites</title>
-<style>
-body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #0b0e1c;
-    color: #d0d0d0;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-h1, h2, h3 {
-    color: #00b0c0;
-    text-align: center;
-}
-section {
-    margin-bottom: 2rem;
-    max-width: 800px;
-    text-align: left;
-}
-a.back-button {
-    color: #00b0c0;
-    text-decoration: none;
-    border: 1px solid #00b0c0;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: background 0.3s, color 0.3s;
-}
-a.back-button:hover {
-    background-color: #00b0c0;
-    color: #0b0e1c;
-}
-footer {
-    text-align: center;
-    color: #555;
-    font-size: 0.8rem;
-    margin-top: 2rem;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APA INTERNAL PORTAL – Material Sciences</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #00b0c0;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      border: 1px solid #00b0c0;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #10192e;
+    }
+    a {
+      color: #00b0c0;
+      text-decoration: none;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+  </style>
 </head>
 <body>
-<h1>APA RESEARCH BRIEF – DEVELOPMENT OF ANTI-MAGIC COMPOSITES</h1>
-<section>
+  <h1>APA RESEARCH BRIEF – MATERIAL SCIENCES</h1>
+
+  <section>
     <h2>OVERVIEW</h2>
-    <p>The APA Material Sciences team has recently advanced the development of anti-magic composites, focusing on the containment and suppression of active casters and artifacts through targeted material design. These efforts directly support field operations by reducing the threat level of magical entities during capture and transport.</p>
-</section>
-<section>
-    <h2>PROJECT FOCUS: ANTI-MAGIC HANDCUFFS</h2>
-    <p>Current prototypes utilize a base of refined lead alloy, which naturally disrupts mana flow, combined with unique counter-enchantments inlaid within the material matrix. The lead serves as a suppression conduit while the enchantments actively drain or disrupt spell matrices in contact with the cuffs.</p>
-    <ul>
-        <li>Effective in dampening spellcasting from restrained targets.</li>
-        <li>Reduces the ability to access prepared spells and mana pools while secured.</li>
-        <li>Tested on Class I-II entities and confirmed effective under stress conditions.</li>
-        <li>Field Ops report risk of extreme strength breaking these tools. Conjecture if this was due to faith-based magic is ongoing and research is inconclusive at this time.</li>
-    </ul>
-</section>
-<section>
-    <h2>FUTURE DEVELOPMENT</h2>
-    <ul>
-        <li>Integration of resonance-disrupting sigils for additional suppression layers for faith-based magic.</li>
-        <li>Expansion to containment bars, cages, and transport modules using the same composite technology.</li>
-        <li>Mid-term goal of equipping all field operatives with lightweight anti-magic restraints for restraint instead of just strike teams.</li>
-    </ul>
-</section>
-<section>
-    <h2>APA POSITION</h2>
-    <p>Anti-magic composites are critical for the secure capture and transport of magical entities and artifact containment. The APA prioritizes this technology to prevent veil breaches during field operations and to reduce operational risks from active casters.</p>
-</section>
-<a href="material_sciences.html" class="back-button">&larr; Return to Material Sciences</a>
-<footer>
-    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
-</footer>
-</body>
-    
-<!-- BEEP AUDIO + SCRIPT -->
-<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<script>
-function playBeepAndNavigate(e) {
-    e.preventDefault(); // Stop the browser from navigating immediately
+    <p>The Material Sciences unit within the APA Research Division is tasked with the analysis, containment, and weaponization countermeasures of enchanted materials. This branch directly supports field operations by providing advanced containment materials, anti-magic composites, and intelligence on artifact structural weaknesses.</p>
+  </section>
 
-    const audio = document.getElementById('sfx');
-    const link = e.currentTarget.getAttribute('href');
+  <section>
+    <h2>FOCUS AREAS</h2>
+    <h3>Analysis of Enchanted Materials</h3>
+    <p>Conduct structural and energetic assessments of magically imbued metals, stones, fabrics, and organic matter. Identify resonance frequencies, mana retention capabilities, and risk factors for leakage or sentience.</p>
 
-    if (audio) {
-        audio.currentTime = 0;
-        audio.play().then(() => {
-            // Wait until beep finishes, or just delay a bit
-            setTimeout(() => {
-                window.location.href = link;
-            }, 300); // delay in milliseconds (~length of the beep)
-        }).catch((err) => {
-            // Fallback if autoplay fails (e.g., browser blocks sound)
-            window.location.href = link;
-        });
-    } else {
-        // No audio element found, navigate immediately
-        window.location.href = link;
-    }
-}
+    <h3>Development of Anti-Magic Composites</h3>
+    <p>Research and produce materials capable of absorbing, deflecting, or nullifying magical energies, integrating these composites into APA containment and suppression gear.</p>
 
-// Reattach event listeners
-function attachAudioListeners() {
-    document.querySelectorAll('a[href]').forEach(link => {
-        link.removeEventListener('click', playBeepAndNavigate);
-        link.addEventListener('click', playBeepAndNavigate);
-    });
-}
+    <h3>Reverse-Engineering Artifacts</h3>
+    <p>Disassemble recovered magical artifacts to map enchantment matrices and develop neutralization methods for field use.</p>
 
-attachAudioListeners();
-
-window.addEventListener('pageshow', function () {
-    attachAudioListeners();
-});
-</script>
-
-</html>
+    <h3>Resilience Testing Under Magical Strain<
