@@ -1,12 +1,20 @@
 # Whole page tree 
 
-## 🗂 Pages
-- [Home](https://bodaga.github.io/Bodaga/)
-- [About](pages/about.md)
+## 🗂 Index
+- [View](https://bodaga.github.io/Bodaga/)
+- [Code](https://github.com/Bodaga/Bodaga/blob/main/index.html)
 
-## 🧩 Components
-- [Navbar](components/navbar.md)
-- [Footer](components/footer.md)
+## 🧩 Operations
+- [View](https://bodaga.github.io/Bodaga/operations.html)
+- [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
+
+## 🧩 Intelligence
+- [View](https://bodaga.github.io/Bodaga/intelligence.html)
+- [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
+
+- ## 🧩 Research
+- [View](https://bodaga.github.io/Bodaga/research.html)
+- [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
 
 ## 📘 Docs
 - [Intro](docs/intro.md)
