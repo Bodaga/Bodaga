@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>APA INTERNAL PORTAL – Submit Post-Op Report</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+    text-align: center;
+  }
+  main {
+    padding: 2rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+  }
+  label {
+    margin-top: 1rem;
+    color: #00b0c0;
+  }
+  input, textarea {
+    background-color: #141824;
+    color: #d0d0d0;
+    border: 1px solid #00b0c0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  button {
+    margin-top: 1rem;
+    background-color: #0b0e1c;
+    color: #00b0c0;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  button:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  a.back {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA INTERNAL PORTAL: SUBMIT POST-OP REPORT</h1>
+</header>
+<main>
+  <form id="postOpForm">
+    <label for="agentName">Agent Name / Callsign</label>
+    <input type="text" id="agentName" name="agentName" required />
+
+    <label for="mission">Mission / Operation</label>
+    <input type="text" id="mission" name="mission" required />
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" required />
+
+    <label for="summary">Summary of Operation</label>
+    <textarea id="summary" name="summary" rows="5" required></textarea>
+
+    <label for="casualties">Casualties / Losses (If Any)</label>
+    <textarea id="casualties" name="casualties" rows="3"></textarea>
+
+    <label for="recommendations">Recommendations / Follow-Up Actions</label>
+    <textarea id="recommendations" name="recommendations" rows="3"></textarea>
+
+    <button type="submit">Submit Report</button>
+  </form>
+  <a href="operations.html" class="back">&larr; Return to Operations Division</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  const audio = document.getElementById('sfx');
+
+  // Play beep, then navigate
+  function playBeepAndNavigate(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      setTimeout(() => {
+        window.location.href = e.currentTarget.href;
+      }, 300);
+    }).catch(() => {
+      window.location.href = e.currentTarget.href;
+    });
+  }
+
+  // Play beep and then submit form
+  function playBeepAndSubmit(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      e.target.submit();
+    }).catch(() => {
+      e.target.submit();
+    });
+  }
+
+  document.querySelector('a.back').addEventListener('click', playBeepAndNavigate);
+  document.getElementById('postOpForm').addEventListener('submit', playBeepAndSubmit);
+</script>
+</body>
+</html>
