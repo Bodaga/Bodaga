@@ -11,5 +11,4 @@
 
 ## 🧩 Research
 - [View](https://bodaga.github.io/Bodaga/research.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
-    ## 📘 Material Sciences
-    - [View](https://bodaga.github.io/Bodaga/research.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/MaterialSciences.html)
+- [📘 Material Sciences](https://bodaga.github.io/Bodaga/research.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/MaterialSciences.html)
