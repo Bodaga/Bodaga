@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>APA INTERNAL PORTAL – Equipment Resupply Ticket</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+    text-align: center;
+  }
+  main {
+    padding: 2rem;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  label {
+    margin-top: 1rem;
+    color: #00b0c0;
+  }
+  input, textarea {
+    background-color: #141824;
+    color: #d0d0d0;
+    border: 1px solid #00b0c0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    margin-top: 1rem;
+    background-color: #0b0e1c;
+    color: #00b0c0;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  button:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  a.back {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA INTERNAL PORTAL: EQUIPMENT RESUPPLY TICKET</h1>
+</header>
+<main>
+  <form id="resupplyForm">
+    <label for="agentName">Agent Name / Callsign</label>
+    <input type="text" id="agentName" name="agentName" required>
+
+    <label for="location">Current Location</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="equipment">Equipment Requested</label>
+    <textarea id="equipment" name="equipment" rows="4" required></textarea>
+
+    <label for="urgency">Urgency Level</label>
+    <input type="text" id="urgency" name="urgency" required>
+
+    <button type="submit">Submit Resupply Request</button>
+  </form>
+  <a href="operations.html" class="back">&larr; Return to Operations Division</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  const audio = document.getElementById('sfx');
+
+  function playBeepAndNavigate(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      setTimeout(() => {
+        window.location.href = e.currentTarget.href;
+      }, 300);
+    }).catch(() => {
+      window.location.href = e.currentTarget.href;
+    });
+  }
+
+  function playBeepAndSubmit(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      e.target.submit();
+    }).catch(() => {
+      e.target.submit();
+    });
+  }
+
+  document.querySelector('a.back').addEventListener('click', playBeepAndNavigate);
+  document.getElementById('resupplyForm').addEventListener('submit', playBeepAndSubmit);
+</script>
+</body>
+</html>
