@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA FACTION DOSSIER – DEEP ONES</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+    text-align: center;
+  }
+  main {
+    padding: 2rem;
+    max-width: 700px;
+    text-align: left;
+  }
+  h2 {
+    color: #00b0c0;
+    margin-top: 1rem;
+  }
+  p, ul {
+    margin: 0.5rem 0;
+  }
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+  }
+  a.back {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  blockquote {
+    border-left: 2px solid #00b0c0;
+    padding-left: 1rem;
+    color: #00b0c0;
+    margin: 1rem 0;
+  }
+</style>
+</head>
+<body onload="document.getElementById('sfx').play();">
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA FACTION DOSSIER – DEEP ONES</h1>
+</header>
+<main>
+  <p><strong>THREAT DESIGNATION:</strong> UNKNOWN AQUATIC ENTITIES</p>
+  <p><strong>STATUS:</strong> ACTIVE – SIGHTINGS CONFIRMED</p>
+  <h2>SUMMARY</h2>
+  <p>The "Deep Ones" are an aquatic, non-human faction suspected to operate globally, primarily in deep oceanic environments. APA knowledge is limited due to their elusive nature and minimal surface activity. They are speculated to possess advanced bio-magical adaptations enabling deep-water habitation and unknown magical capabilities.</p>
+  <h2>KNOWN ENCOUNTERS</h2>
+  <ul>
+    <li>Single sample recovered off the coast of Ireland. Currently contained at APA Arctic Site-1. Dissection inconclusive; tissue samples exhibit regenerative properties and anomalous thaumaturgic signal patterns.</li>
+    <li>Multiple unverified sightings reported by coastal villages globally, often correlated with missing persons and unexplained lights beneath the waterline.</li>
+  </ul>
+  <h2>CONJECTURE</h2>
+  <ul>
+    <li>May represent an organized species with a collective intelligence or hierarchy.</li>
+    <li>Capable of crossing Veil boundaries, potentially exploiting deep-sea leyline weaknesses.</li>
+  </ul>
+  <blockquote>
+    THREAT ASSESSMENT:<br><br>
+    Unknown to High. Insufficient data for full evaluation. Avoid engagement unless necessary. Retrieval of additional samples and observation advised.
+  </blockquote>
+  <a href="intelligence.html" class="back" onclick="playBeep();">&larr; Return to Intelligence &amp; Analysis Division</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  function playBeep() {
+    let audio = document.getElementById('sfx');
+    audio.currentTime = 0;
+    audio.play();
+  }
+</script>
+</body>
+</html>
