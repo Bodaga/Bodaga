@@ -16,6 +16,6 @@
 - [View](https://bodaga.github.io/Bodaga/research.html)
 - [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
 
-    ## 📘 Docs
+    ## 📘 Material Sciences
     - [View](https://bodaga.github.io/Bodaga/research.html)
     - [Code](https://github.com/Bodaga/Bodaga/blob/main/MaterialSciences.html)
