@@ -12,7 +12,7 @@
 - [View](https://bodaga.github.io/Bodaga/intelligence.html)
 - [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
 
-- ## 🧩 Research
+## 🧩 Research
 - [View](https://bodaga.github.io/Bodaga/research.html)
 - [Code](https://github.com/Bodaga/Bodaga/blob/main/research.html)
 
