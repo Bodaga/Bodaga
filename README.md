@@ -1,8 +1,7 @@
 # Whole page tree 
 
 ## 🗂 Index
-- [View](https://bodaga.github.io/Bodaga/)
-- [Code](https://github.com/Bodaga/Bodaga/blob/main/index.html)
+- [View](https://bodaga.github.io/Bodaga/)- [Code](https://github.com/Bodaga/Bodaga/blob/main/index.html)
 
 ## 🧩 Operations
 - [View](https://bodaga.github.io/Bodaga/operations.html) [Code](https://github.com/Bodaga/Bodaga/blob/main/operations.html)
