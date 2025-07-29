@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>APA INTERNAL PORTAL – Submit HUMINT / SIGINT Report</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #00b0c0;
+    text-align: center;
+  }
+  main {
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 1rem;
+    color: #00b0c0;
+  }
+  input, textarea, select {
+    background-color: #141824;
+    color: #d0d0d0;
+    border: 1px solid #00b0c0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    margin-top: 1.5rem;
+    background-color: #0b0e1c;
+    color: #00b0c0;
+    border: 1px solid #00b0c0;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  button:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  a.back {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA INTERNAL PORTAL: SUBMIT HUMINT / SIGINT REPORT</h1>
+</header>
+<main>
+  <form id="reportForm">
+    <label for="agentName">Agent Name / Callsign</label>
+    <input type="text" id="agentName" name="agentName" required />
+
+    <label for="reportType">Report Type</label>
+    <select id="reportType" name="reportType" required>
+      <option value="" disabled selected>Select report type</option>
+      <option value="HUMINT">HUMINT (Human Intelligence)</option>
+      <option value="SIGINT">SIGINT (Signals Intelligence)</option>
+      <option value="Both">Both</option>
+    </select>
+
+    <label for="location">Report Location</label>
+    <input type="text" id="location" name="location" required />
+
+    <label for="summary">Report Summary</label>
+    <textarea id="summary" name="summary" rows="6" required></textarea>
+
+    <label for="urgency">Urgency Level</label>
+    <select id="urgency" name="urgency" required>
+      <option value="" disabled selected>Select urgency</option>
+      <option value="Low">Low</option>
+      <option value="Moderate">Moderate</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+
+    <button type="submit">Submit Report</button>
+  </form>
+  <a href="intelligence.html" class="back">&larr; Return to Intelligence & Analysis Division</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  const audio = document.getElementById('sfx');
+
+  function playBeepAndNavigate(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      setTimeout(() => {
+        window.location.href = e.currentTarget.href;
+      }, 300);
+    }).catch(() => {
+      window.location.href = e.currentTarget.href;
+    });
+  }
+
+  function playBeepAndSubmit(e) {
+    e.preventDefault();
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      e.target.submit();
+    }).catch(() => {
+      e.target.submit();
+    });
+  }
+
+  document.querySelector('a.back').addEventListener('click', playBeepAndNavigate);
+  document.getElementById('reportForm').addEventListener('submit', playBeepAndSubmit);
+</script>
+</body>
+</html>
