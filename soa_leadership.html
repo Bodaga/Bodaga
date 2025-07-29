@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA DOSSIER – SUBJECT: ZEPHYROS KADE</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0b0e1c;
+    color: #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #141824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header img {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00b0c0;
+    text-align: center;
+  }
+  main {
+    padding: 2rem;
+    max-width: 700px;
+    text-align: left;
+  }
+  h2 {
+    color: #00b0c0;
+    margin-top: 1rem;
+  }
+  p, ul {
+    margin: 0.5rem 0;
+  }
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+  }
+  a.back {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00b0c0;
+    text-decoration: none;
+    border: 1px solid #00b0c0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  a.back:hover {
+    background-color: #00b0c0;
+    color: #0b0e1c;
+  }
+  blockquote {
+    border-left: 2px solid #00b0c0;
+    padding-left: 1rem;
+    color: #00b0c0;
+    margin: 1rem 0;
+  }
+</style>
+</head>
+<body onload="document.getElementById('sfx').play();">
+<header>
+  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+  <h1>APA DOSSIER – SUBJECT: ZEPHYROS KADE</h1>
+</header>
+<main>
+  <p><strong>THREAT DESIGNATION:</strong> LEADER – SONS OF AETHER (SoA)</p>
+  <p><strong>STATUS:</strong> ACTIVE – HIGH PRIORITY</p>
+  <h2>BACKGROUND</h2>
+  <p>Zephyros was an acolyte within the Order, trained at one of its most prestigious arcane academies (rumored beneath Oxford), where he gained notoriety for radical ideas:</p>
+  <ul>
+    <li>Magic is the birthright of all humankind, not an elite inheritance.</li>
+    <li>Ritual circles are an artificial cage, not protection.</li>
+    <li>The Order became prison wardens of human potential.</li>
+  </ul>
+  <p>His banned treatise, <em>"Aether Unbound,"</em> claimed magic is alive and desires communion with humanity. Readers were detained, and Zephyros was expelled.</p>
+  <h2>THE BREAK AND THE FIRE</h2>
+  <p>After exile, Zephyros vanished, reemerging decades later leading the Sons of Aether, an underground collective of arcanists, defectors, and rogue scientists. Their first major act was the Lisbon Event, a magical rupture near a NATO data center resulting in comatose officials and a permanent increase in local magical energy. The NATO cover story cited an electrical grid fault and solar flare.</p>
+  <p>The SoA motto, <em>"Lift the Veil,"</em> began circulating in occult forums soon after.</p>
+  <h2>MODERN STRUCTURE AND GOALS</h2>
+  <p>The SoA functions as a confederacy of cells under Zephyros' leadership, aiming to:</p>
+  <ul>
+    <li>Disrupt or destroy remaining Ritual Circles.</li>
+    <li>Distribute magical artifacts to sympathetic actors.</li>
+    <li>Undermine APA and the Order of the Veil.</li>
+    <li>Prepare the world for the return of raw magic.</li>
+  </ul>
+  <p>Zephyros is rarely seen, broadcasting messages through enchanted frequencies and dreams, received as gospel by followers. Rumors suggest he underwent an awakening ritual beneath the Arctic ice and emerged changed, possibly no longer fully human.</p>
+  <blockquote>
+    THREAT ASSESSMENT:<br><br>
+    Critical. Charismatic and ideologically driven, Zephyros poses a systemic risk to Veil Protocols and global stability. Capture or elimination remains a top APA priority.
+  </blockquote>
+  <a href="soa.html" class="back" onclick="playBeep();">&larr; Return to Sons of Aether Dossier</a>
+</main>
+<footer>
+  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  function playBeep() {
+    let audio = document.getElementById('sfx');
+    audio.currentTime = 0;
+    audio.play();
+  }
+</script>
+</body>
+</html>
