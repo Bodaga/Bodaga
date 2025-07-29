@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priest Field Test - Phase II</title>
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: black;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #00ffff;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    blockquote {
+      border-left: 4px solid #00ffcc;
+      margin-left: 0;
+      padding-left: 1rem;
+      color: #aaffff;
+    }
+  </style>
+</head>
+<body>
+  <!-- BEEP AUDIO + SCRIPT -->
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <script>
+    function playBeepAndNavigate(e) {
+      e.preventDefault(); 
+      const audio = document.getElementById('sfx');
+      const link = e.currentTarget.getAttribute('href');
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().then(() => {
+          setTimeout(() => {
+            window.location.href = link;
+          }, 300);
+        }).catch(() => {
+          window.location.href = link;
+        });
+      } else {
+        window.location.href = link;
+      }
+    }
+
+    function attachAudioListeners() {
+      document.querySelectorAll('a[href]').forEach(link => {
+        link.removeEventListener('click', playBeepAndNavigate);
+        link.addEventListener('click', playBeepAndNavigate);
+      });
+    }
+
+    attachAudioListeners();
+    window.addEventListener('pageshow', attachAudioListeners);
+  </script>
+
+  <div class="container">
+    <h1>File 2: “Priest Field Test - Phase II”</h1>
+    <h2>Field Deployment Report – APA | Cognitive Effects and Indoctrination</h2>
+
+    <blockquote>
+      <strong>OPERATION:</strong> “Blessing Hand” Pilot Program – Cambodia Node (V12-A)<br><br>
+      <strong>DATE:</strong> [REDACTED]<br><br>
+      <strong>SUBJECT:</strong> Phase II evaluation of Arcane-Aided Compliance Measures (AACM) via Proxy Ritual Conduit (PRC)<br><br>
+
+      The deployed “Priest” conduit (Asset ID: EX-09-3C) has shown high-efficiency enchantment dispersion through prayer-driven incantations and latent Geas anchors.<br><br>
+
+      <strong>Observed Effects on Test Subjects:</strong><br>
+      - 88% displayed marked emotional suppression within 3 days<br>
+      - 63% compliance with external commands (non-verbal)<br>
+      - 9% long-term resistance linked to previous magical exposure<br><br>
+
+      Reactions to PRC appear stronger in <strong>religiously primed</strong> populations, suggesting localized deity imagery increases enchantment uptake.<br><br>
+
+      Current test is <strong>within acceptable bounds</strong>, though asset deterioration is increasing—exposure to rural variance factors may require a third-generation proxy.<br><br>
+
+      <strong>NOTE:</strong> Terminate PRC if verbal drift exceeds 14% from baseline phrases.
+    </blockquote>
+
+    <p><a href="research.html">← Return to Research Page</a></p>
+  </div>
+</body>
+</html>
