@@ -22,7 +22,7 @@
 - [📘 Arcane Containment](https://bodaga.github.io/Bodaga/arcane_containment.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/arcane_containment.html)
 - [📘 Thaumaturgic Signal Monitoring (TSM)](https://bodaga.github.io/Bodaga/thaumaturgic_signal_monitoring.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/thaumaturgic_signal_monitoring.html)
 - [📘 Environmental Response](https://bodaga.github.io/Bodaga/environmental_response.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/environmental_response.html)
-- [📘 Material Sciences](https://bodaga.github.io/Bodaga/material_sciences.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/Material_Sciences.html)
+- [📘 Material Sciences](https://bodaga.github.io/Bodaga/material_sciences.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/material_sciences.html)
 - [📘 Counter-Ritual Analytics](https://bodaga.github.io/Bodaga/counter_ritual_analytics.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/counter_ritual_analytics.html)
 - [📘 Biological Aberration Studies](https://bodaga.github.io/Bodaga/biological_aberration_studies.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/biological_aberration_studies.html)
 - [📘 Cognitive Effects and Indoctrination](https://bodaga.github.io/Bodaga/cognitive_effects.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/cognitive_effects.html)
