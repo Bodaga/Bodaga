@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APA DOSSIER – SUBJECT: APOLLO Dalton</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Beep on button or link click
+    const beep = new Audio('button-beep.mp3');
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("button, a").forEach(el => {
+        el.addEventListener("click", () => {
+          beep.currentTime = 0;
+          beep.play();
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="page-title">APA DOSSIER – SUBJECT: "APOLLO Dalton (Luan Beauchamp)"</h1>
+      <h2 class="sub-header">Intelligence & Analysis Division</h2>
+      <p><strong>Agency for Paranormal Affairs – Global Watchlist</strong></p>
+      <p><strong>Threat Designation:</strong> RED-CLASS PENDING</p>
+    </header>
+
+    <main>
+      <section class="content-block">
+        <h3>Identifying Information</h3>
+        <p><strong>Code Designation:</strong> SHOW FLARE</p>
+        <p><strong>Status:</strong> ACTIVE – Global Threat Consideration Pending</p>
+        <p><strong>Origin:</strong> United Kingdom (Aristocratic Background)</p>
+        <p><strong>Last Verified Presence (Pre-Incident):</strong> Shanghai, China – 2 Years pre-Stonehenge</p>
+      </section>
+
+      <section class="content-block">
+        <h3>Arcane Classification</h3>
+        <p><strong>Type:</strong> Sorcerer</p>
+        <p><strong>Confirmed Ability Level:</strong> Minimum Class VI</p>
+        <p><strong>Full Classification:</strong> Unconfirmed</p>
+      </section>
+
+      <section class="content-block">
+        <h3>Surveillance Notes</h3>
+        <ul>
+          <li>Documented mental health variances prior to disappearance.</li>
+          <li>Lived in China under pseudonym.</li>
+          <li>Engaged with wealthy communities; charismatic socialite.</li>
+          <li>Affinity for manipulation and illusion-based magic.</li>
+          <li>Flamboyant public style, masking strategic calculation.</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <h3>Additional Notes</h3>
+        <ul>
+          <li>Financial records frozen post-Stonehenge event.</li>
+          <li>Family maintains media silence on involvement.</li>
+          <li>Romanticized by fringe occult blogs and conspiracy theorists.</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <h3>Threat Assessment</h3>
+        <blockquote>
+          <strong>Moderate to High</strong> – Subject is unstable but socially adaptive. 
+          Possible point of diplomatic leverage: may respond to moral appeals or ideological persuasion. 
+          Recommend elimination if containment fails or conversion is not viable.
+        </blockquote>
+      </section>
+
+      <nav class="nav-links">
+        <a href="operations.html">&larr; Return to Operations Division Index</a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>APA Internal Use Only | Intelligence & Analysis Division</p>
+    </footer>
+  </div>
+</body>
+</html>
