@@ -1,5 +1,24 @@
 TBA
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Example</title>
+</head>
+<body>
+
+<details>
+  <summary>Click to show details</summary>
+  <p>This is the hidden content that appears when the user clicks.</p>
+  <ul>
+    <li>List item one</li>
+    <li>List item two</li>
+  </ul>
+</details>
+
+</body>
+</html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -62,29 +81,6 @@ function playBeep() {
   const audio = document.getElementById('sfx');
   audio.currentTime = 0;
   audio.play();
-}<!DOCTYPE html>
-<html>
-<head>
-  <title>Dropdown Example</title>
-</head>
-<body>
-
-<select id="myDropdown" onchange="handleChange()">
-  <option value="apple">Apple</option>
-  <option value="banana">Banana</option>
-  <option value="cherry">Cherry</option>
-</select>
-
-<script>
-  function handleChange() {
-    const dropdown = document.getElementById("myDropdown");
-    const selectedValue = dropdown.value;
-    console.log("Selected:", selectedValue);
-  }
-</script>
-
-</body>
-</html>
 
 </script>
 </body>
