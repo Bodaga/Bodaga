@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css" />
   <style>body{margin:0;font-family:'Courier New',Courier,monospace;background-color:#0b0e1c;color:#d0d0d0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh}header{width:100%;padding:1rem;background-color:#141824;display:flex;align-items:center;justify-content:center;flex-direction:column}header img{max-width:100px;margin-bottom:0.5rem}h1{margin:0;font-size:1.2rem;color:#00b0c0;text-align:center}main{padding:2rem;max-width:700px;text-align:left}h2{color:#00b0c0;margin-top:1rem}p,ul{margin:0.5rem 0}footer{padding:1rem;font-size:0.8rem;color:#555;text-align:center}a.back{display:inline-block;margin-top:1rem;color:#00b0c0;text-decoration:none;border:1px solid #00b0c0;padding:0.5rem;border-radius:4px;transition:background 0.3s}a.back:hover{background-color:#00b0c0;color:#0b0e1c}blockquote{border-left:2px solid #00b0c0;padding-left:1rem;color:#00b0c0;margin:1rem 0}</style>
 </head>
+    <body onload="document.getElementById('sfx').play();">
+  <header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA DOSSIER – SUBJECT: "WILHELM"</h1>
+  </header>
 <body class="apa-background">
   <div class="apa-container">
     <h1>APA FILE: APA INTERNAL BRIEFING</h1>
@@ -81,9 +86,9 @@
     <p>The circle remains intact. Whether by choice or chance, they preserved the veil. The question is why.</p>
     <p><strong>– [REDACTED]</strong><br>
     Arcane Threat Assessment Lead – APA</p>
-
-    <a href="intelligence.html" class="return-link" onclick="document.getElementById('beep').play();">← Return to Intelligence Briefings</a>
-    <audio id="beep" src="assets/beep.mp3" preload="auto"></audio>
+    <a href="intelligence.html" class="back" onclick="playBeep();">&larr; Return to Intelligence & Analysis Division</a>
+    <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+    <script>function playBeep(){let audio=document.getElementById('sfx');audio.currentTime=0;audio.play();}</script>
   </div>
 </body>
 </html>
