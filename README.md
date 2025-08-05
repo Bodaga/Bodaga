@@ -16,24 +16,24 @@
 - [📘 View](https://bodaga.github.io/Bodaga/intelligence.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
 
 [ACTION]
-- [📘 View](https://bodaga.github.io/Bodaga/submit_activity_report.html) & [Code](submit_activity_report.html)
+- [📘 Submit_activity_report](https://bodaga.github.io/Bodaga/submit_activity_report.html) & [Code](submit_activity_report.html)
   
 [ACTIVE THREAT DOSSIERS]
-- [📘 View](https://bodaga.github.io/Bodaga/soa.html) & [Code](soa.html)
-- [📘 View](https://bodaga.github.io/Bodaga/ootv.html) & [Code](ootv.html)
-- [📘 View](https://bodaga.github.io/Bodaga/arcane_syndicate.html) & [Code](arcane_syndicate.html)
-- [📘 View](https://bodaga.github.io/Bodaga/deep_ones.html) & [Code](deep_ones.html)
+- [📘 Sons of Aether](https://bodaga.github.io/Bodaga/soa.html) & [Code](soa.html)
+- [📘 Order of the Veil](https://bodaga.github.io/Bodaga/ootv.html) & [Code](ootv.html)
+- [📘 Arcane Syndicate](https://bodaga.github.io/Bodaga/arcane_syndicate.html) & [Code](arcane_syndicate.html)
+- [📘 'Deep Ones'](https://bodaga.github.io/Bodaga/deep_ones.html) & [Code](deep_ones.html)
   
 [UNALIGNED MAGICAL ACTORS]
-- [📘 View](https://bodaga.github.io/Bodaga/post_djoser_briefing.html) & [Code](post_djoser_briefing.html)
-- [📘 View](https://bodaga.github.io/Bodaga/wilhelm.html) & [Code](wilhelm.html)
-- [📘 View](https://bodaga.github.io/Bodaga/nesbitt.html) & [Code](nesbitt.html)
-- [📘 View](https://bodaga.github.io/Bodaga/dalton.html) & [Code](dalton.html)
-- [📘 View](https://bodaga.github.io/Bodaga/holly.html) & [Code](holly.html)
+- [📘 Subject: "Codename Stonehenge" ](https://bodaga.github.io/Bodaga/post_djoser_briefing.html) & [Code](post_djoser_briefing.html)
+- [📘 Subject: "WILHELM"](https://bodaga.github.io/Bodaga/wilhelm.html) & [Code](wilhelm.html)
+- [📘 Subject: "NESBIT"](https://bodaga.github.io/Bodaga/nesbitt.html) & [Code](nesbitt.html)
+- [📘 Subject: "DALTON"](https://bodaga.github.io/Bodaga/dalton.html) & [Code](dalton.html)
+- [📘 Subject: "HOLLY"](https://bodaga.github.io/Bodaga/holly.html) & [Code](holly.html)
   
 [REQUESTS]
-- [📘 View](https://bodaga.github.io/Bodaga/file_media_suppression.html) & [Code](file_media_suppression.html)
-- [📘 View](https://bodaga.github.io/Bodaga/submit_humint_sigint.html) & [Code](submit_humint_sigint.html)
+- [📘 File Media Suppression Request](https://bodaga.github.io/Bodaga/file_media_suppression.html) & [Code](file_media_suppression.html)
+- [📘 Submit HUMINT / SIGINT Report](https://bodaga.github.io/Bodaga/submit_humint_sigint.html) & [Code](submit_humint_sigint.html)
 
 ## 🧩 Research
 [SUBDIVISIONS]
@@ -56,5 +56,6 @@
 
 
 [SUPPORT SERVICES]
+
 Site Logistics & Engineering
 Internal Security Clearance Requests
