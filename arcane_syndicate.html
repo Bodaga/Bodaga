@@ -4,107 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arcane Syndicate Dossier</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #d9d9d9;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2em;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    header img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 1rem;
     }
     h1 {
-      color: #00ffff;
+      color: #00b0c0;
+      margin-bottom: 1rem;
     }
-    .button {
-      background-color: #222;
-      color: #00ffff;
-      border: 2px solid #00ffff;
-      padding: 10px 20px;
+    h2 {
+      color: #00b0c0;
+      margin-top: 2rem;
+    }
+    p, ul, blockquote {
+      color: #a0a0a0;
+      max-width: 800px;
+      margin: 1rem auto;
+      text-align: left;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    blockquote {
+      border-left: 4px solid #00b0c0;
+      padding-left: 1rem;
+      font-style: italic;
+    }
+    a.button {
+      color: #00b0c0;
       text-decoration: none;
       display: inline-block;
-      margin-top: 2em;
-      cursor: pointer;
+      padding: 0.75rem 1.5rem;
+      margin: 2rem auto 0;
+      border: 2px solid #00b0c0;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
-    .button:hover {
-      background-color: #00ffff;
-      color: #0d0d0d;
+    a.button:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    footer {
+      margin-top: 2rem;
+      color: #606060;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <audio id="beep-sound" src="../assets/beep.mp3" preload="auto"></audio>
+  <header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA DOSSIER – SUBJECT: ARCANE SYNDICATE</h1>
+  </header>
 
-  <h1>APA DOSSIER – SUBJECT: ARCANE SYNDICATE</h1>
+  <main>
+    <h2>CODE DESIGNATION: BLACKWATER</h2>
+    <p><strong>STATUS:</strong> HIGH PRIORITY MONITORING</p>
 
-  <h2>CODE DESIGNATION: BLACKWATER</h2>
-  <p><strong>STATUS:</strong> HIGH PRIORITY MONITORING</p>
+    <h2>OVERVIEW:</h2>
+    <p>
+      Covert network of spellcasters, artificers, and magical traffickers primarily operating across Europe, North Africa, and parts of the Middle East. Suspected front operations in antique arms trading, academic institutions, and restoration industries. Regular contact with at least one known demonic entity (see: INTERLOCUTOR FENRAX).
+    </p>
 
-  <h2>OVERVIEW:</h2>
-  <p>
-    Covert network of spellcasters, artificers, and magical traffickers primarily operating across Europe, North Africa, and parts of the Middle East. Suspected front operations in antique arms trading, academic institutions, and restoration industries. Regular contact with at least one known demonic entity (see: INTERLOCUTOR FENRAX).
-  </p>
+    <h2>ARCANE CLASSIFICATION:</h2>
+    <p>
+      Highly varied. Known associates range from Class III to Class IX arcana. Reports of temporal incantation (prohibited class) confirmed.
+    </p>
 
-  <h2>ARCANE CLASSIFICATION:</h2>
-  <p>
-    Highly varied. Known associates range from Class III to Class IX arcana. Reports of temporal incantation (prohibited class) confirmed.
-  </p>
+    <h2>NOTES:</h2>
+    <ul>
+      <li>Core leadership structure unknown. Suspected decentralised command.</li>
+      <li>Confirmed to have infiltrated several magical supply chains.</li>
+      <li>Working hypothesis: network aims to reintroduce widespread magic through black-market deployment and public veils breach.</li>
+      <li>Possible ties to Sons of Aether via financial intermediaries. See ongoing audits.</li>
+    </ul>
 
-  <h2>NOTES:</h2>
-  <ul>
-    <li>Core leadership structure unknown. Suspected decentralised command.</li>
-    <li>Confirmed to have infiltrated several magical supply chains.</li>
-    <li>Working hypothesis: network aims to reintroduce widespread magic through black-market deployment and public veils breach.</li>
-    <li>Possible ties to Sons of Aether via financial intermediaries. See ongoing audits.</li>
-  </ul>
+    <h2>THREAT ASSESSMENT:</h2>
+    <blockquote>
+      EXTREME. Organization poses a credible threat to veil integrity. Members exhibit high loyalty and operate with tactical intelligence. Containment or elimination of nodes should be considered top priority.
+    </blockquote>
 
-  <h2>THREAT ASSESSMENT:</h2>
-  <blockquote>
-    EXTREME. Organization poses a credible threat to veil integrity. Members exhibit high loyalty and operate with tactical intelligence. Containment or elimination of nodes should be considered top priority.
-  </blockquote>
+    <a class="button" href="intelligence.html">↩ Return to Intelligence Division</a>
+  </main>
 
-  <a class="button" href="intelligence.html" onclick="document.getElementById('beep-sound').play();">↩ Return to Intelligence Division</a>
-</body>
+  <footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+  </footer>
 
-<!-- BEEP AUDIO + SCRIPT -->
-<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<script>
-function playBeepAndNavigate(e) {
-    e.preventDefault(); // Stop the browser from navigating immediately
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <script>
+    function playBeepAndNavigate(e) {
+      e.preventDefault();
+      const audio = document.getElementById('sfx');
+      const link = e.currentTarget.getAttribute('href');
 
-    const audio = document.getElementById('sfx');
-    const link = e.currentTarget.getAttribute('href');
-
-    if (audio) {
+      if (audio) {
         audio.currentTime = 0;
         audio.play().then(() => {
-            // Wait until beep finishes, or just delay a bit
-            setTimeout(() => {
-                window.location.href = link;
-            }, 300); // delay in milliseconds (~length of the beep)
-        }).catch((err) => {
-            // Fallback if autoplay fails (e.g., browser blocks sound)
+          setTimeout(() => {
             window.location.href = link;
+          }, 300);
+        }).catch(() => {
+          window.location.href = link;
         });
-    } else {
-        // No audio element found, navigate immediately
+      } else {
         window.location.href = link;
+      }
     }
-}
 
-// Reattach event listeners
-function attachAudioListeners() {
-    document.querySelectorAll('a[href]').forEach(link => {
+    function attachAudioListeners() {
+      document.querySelectorAll('a[href]').forEach(link => {
         link.removeEventListener('click', playBeepAndNavigate);
         link.addEventListener('click', playBeepAndNavigate);
-    });
-}
+      });
+    }
 
-attachAudioListeners();
-
-window.addEventListener('pageshow', function () {
     attachAudioListeners();
-});
-</script>
-
-  
+    window.addEventListener('pageshow', attachAudioListeners);
+  </script>
+</body>
 </html>
