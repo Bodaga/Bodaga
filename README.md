@@ -16,23 +16,20 @@
 - [📘 View](https://bodaga.github.io/Bodaga/intelligence.html) & [Code](https://github.com/Bodaga/Bodaga/blob/main/intelligence.html)
 [ACTION]
 - [📘 View](https://bodaga.github.io/Bodaga/submit_activity_report.html) & [Code](submit_activity_report.html)
-    <h2>ACTIVE THREAT DOSSIERS</h2>
-    <a href="soa.html" class="link">Sons of Aether</a>
-    <a href="ootv.html" class="link">Order of the Veil</a>
-    <a href="arcane_syndicate.html" class="link">Arcane Syndicate</a>
-    <a href="deep_ones.html" class="link">'Deep Ones'</a>
-
-    <h2>UNALIGNED MAGICAL ACTORS</h2>
-    
-    <a href="post_djoser_briefing.html" class="link">Subject: "Codename Stonehenge"</a>
-    <a href="wilhelm.html" class="link">Subject: "WILHELM"</a>
-    <a href="nesbitt.html" class="link">Subject: "NESBIT"</a>
-    <a href="dalton.html" class="link">Subject: "DALTON"</a>
-    <a href="holly.html" class="link">Subject: "HOLLY"</a>
-
-    <h2>REQUESTS</h2>
-    <a href="file_media_suppression.html" class="link">File Media Suppression Request</a>
-    <a href="submit_humint_sigint.html" class="link">Submit HUMINT / SIGINT Report</a>
+[ACTIVE THREAT DOSSIERS]
+- [📘 View](https://bodaga.github.io/Bodaga/soa.html) & [Code](soa.html)
+- [📘 View](https://bodaga.github.io/Bodaga/ootv.html) & [Code](ootv.html)
+- [📘 View](https://bodaga.github.io/Bodaga/arcane_syndicate.html) & [Code](arcane_syndicate.html)
+- [📘 View](https://bodaga.github.io/Bodaga/deep_ones.html) & [Code](deep_ones.html)
+[UNALIGNED MAGICAL ACTORS]
+- [📘 View](https://bodaga.github.io/Bodaga/post_djoser_briefing.html) & [Code](post_djoser_briefing.html)
+- [📘 View](https://bodaga.github.io/Bodaga/wilhelm.html) & [Code](wilhelm.html)
+- [📘 View](https://bodaga.github.io/Bodaga/nesbitt.html) & [Code](nesbitt.html)
+- [📘 View](https://bodaga.github.io/Bodaga/dalton.html) & [Code](dalton.html)
+- [📘 View](https://bodaga.github.io/Bodaga/holly.html) & [Code](holly.html)
+[REQUESTS]
+- [📘 View](https://bodaga.github.io/Bodaga/file_media_suppression.html) & [Code](file_media_suppression.html)
+- [📘 View](https://bodaga.github.io/Bodaga/submit_humint_sigint.html) & [Code](submit_humint_sigint.html)
 
 ## 🧩 Research
 [SUBDIVISIONS]
