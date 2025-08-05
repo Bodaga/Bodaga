@@ -2,96 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>APA INTEL & ANALYSIS – Dossier: Order of the Veil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APA FACTION DOSSIER – ORDER OF THE VEIL (OotV)</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
-      background-color: #111;
-      color: #0f0;
-      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
     }
-    h1, h2 {
-      border-bottom: 1px solid #0f0;
-      padding-bottom: 5px;
+    header {
+      width: 100%;
+      padding: 1rem;
+      background-color: #141824;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
-    .section {
-      margin-top: 30px;
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
     }
-    .label {
-      font-weight: bold;
-      color: #6f6;
+    h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #00b0c0;
+      text-align: center;
     }
-    .redacted {
-      background-color: #0f0;
-      color: #0f0;
-      padding: 0 4px;
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      text-align: left;
+    }
+    h2 {
+      color: #00b0c0;
+      margin-top: 1rem;
+    }
+    p, ul {
+      margin: 0.5rem 0;
+    }
+    footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: center;
+    }
+    a.back, a.link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00b0c0;
+      text-decoration: none;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    a.back:hover, a.link:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    blockquote {
+      border-left: 2px solid #00b0c0;
+      padding-left: 1rem;
+      color: #00b0c0;
+      margin: 1rem 0;
     }
   </style>
 </head>
-<body>
-  <h1>APA INTELLIGENCE & ANALYSIS DIVISION</h1>
-  <h2>ACTIVE THREAT DOSSIER</h2>
+<body onload="document.getElementById('sfx').play();">
+  <header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA FACTION DOSSIER – ORDER OF THE VEIL (OotV)</h1>
+  </header>
+  <main>
+    <p><strong>THREAT DESIGNATION:</strong> LEGACY ARCANE ACTOR – MONITORED ENTITY</p>
+    <p><strong>STATUS:</strong> ACTIVE – GLOBAL REACH (LOW VISIBILITY)</p>
+    <p><strong>OVERVIEW:</strong><br>
+    Ancient organization with pre-modern origin. First direct APA interaction confirmed in 1953, though signs of activity traceable centuries earlier. Maintains arcane oversight posture and intervenes in veil-related incidents with minimal resource projection.</p>
 
-  <div class="section">
-    <div class="label">THREAT NAME:</div>
-    Order of the Veil (OotV)
-  </div>
-
-  <div class="section">
-    <div class="label">CLASSIFICATION:</div>
-    Monitored Entity – Tier 2 | Cooperative Anomalous Organization
-  </div>
-
-  <div class="section">
-    <div class="label">SUMMARY:</div>
-    The "Order of the Veil" is an ancient, extra-governmental entity with global reach and unknown founding origin, believed to predate the APA by centuries—possibly millennia. First recorded interaction with APA assets occurred in 1953, though references to similar operatives exist as far back as the 18th century in various suppressed magical records. Despite its opaque structure and archaic internal systems, the Order demonstrates persistent operational continuity and access to anomalous knowledge.
-
-    The OotV is explicitly dedicated to the **containment and suppression of arcane phenomena**, often overlapping with APA field interests. While not directly aligned with APA doctrine or jurisdiction, the Order has historically demonstrated a cooperative stance, frequently relaying magical incident data (often pre-filtered) to APA front channels.
-
-    Their preference for **minimal mobilization of internal forces** and quiet handovers to APA Operations makes their presence tolerable. However, their **refusal to fully disclose internal leadership**, coupled with a demonstrated capacity for sustained secrecy and deep ritual knowledge, raises continued counterintelligence concerns.
-  </div>
-
-  <div class="section">
-    <div class="label">STRUCTURE (Known):</div>
+    <h2>ORGANIZATIONAL TRAITS</h2>
     <ul>
-      <li><strong>Council of the Veil</strong> – Believed to be governing authority. Number of seats, identities, or selection criteria remain unconfirmed.</li>
-      <li><strong>Knight Captain</strong> – Senior-most known field commander. Directs "Warband" deployments, including force projection and ritual countermeasures. All Knight Captains identified to date have rotated out or died without known successor confirmation.</li>
-      <li><strong>Adherents</strong> – Term used for low-visibility field agents, messengers, and arcane custodians. Often serve as liaisons to APA or act as intermediaries in shared-op zones.</li>
+      <li>Leadership structure unknown. Believed to be governed by a “Council of the Veil.”</li>
+      <li>Known martial branch led by “Knight Captain” – rarely deployed.</li>
+      <li>Field operatives referred to as “Adherents” – used as APA intermediaries or messengers.</li>
+      <li>Operations are minimalistic; emphasis on secrecy and ritual containment.</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <div class="label">NOTABLE INTERACTIONS:</div>
+    <h2>APA POSITION</h2>
     <ul>
-      <li><strong>UK 2004 –</strong> Alerted APA to a failed ritual site in Yorkshire. Minimal local fallout due to pre-emptive OotV sealing.</li>
-      <li><strong>Greenland 1981 –</strong> Recovered anomalous relic handed off to APA via neutral intermediary. Metadata scrubbed.</li>
-      <li><strong>Egypt 2025 –</strong> Indirect assistance rendered during SoA incursion at [REDACTED]. APA field report notes Veil presence on site but no direct communication logged.</li>
+      <li>Cooperative in most interactions; shares incident data (withheld context suspected).</li>
+      <li>Does not obstruct APA operations; often allows APA to handle field escalations.</li>
+      <li>Attempts at infiltration unsuccessful; suspected use of magical vetting or anti-surveillance methods.</li>
     </ul>
-  </div>
 
-  <div class="section">
-    <div class="label">INFILTRATION STATUS:</div>
-    Multiple failed attempts. No APA asset embedded beyond superficial contact roles. Veil appears structurally immune to conventional HUMINT infiltration. Possible thaumaturgic obfuscation or vetting mechanisms in play.
-  </div>
-
-  <div class="section">
-    <div class="label">CURRENT APA POSITION:</div>
-    <strong>Tolerated, monitored, not actively obstructed.</strong><br><br>
-    As long as the Order of the Veil maintains its posture of passive support and non-obstruction, no direct engagement is advised. Intelligence Division maintains open channels for incident reporting. However, elevated suspicion remains due to:
+    <h2>INCIDENT REFERENCES</h2>
     <ul>
-      <li>Refusal to disclose command hierarchy.</li>
-      <li>Unknown funding/armament sources.</li>
-      <li>Confirmed possession of Class-A ritual knowledge predating APA catalogues.</li>
+      <li><strong>Yorkshire, 2004:</strong> Veil breach suppressed prior to APA arrival. Residual OotV glyphs confirmed.</li>
+      <li><strong>Greenland, 1981:</strong> Relic handoff conducted via neutral channel. Provenance untraceable.</li>
+      <li><strong>Cairo, 2025:</strong> Observed during Sons of Aether activity. No contact made. Presence logged.</li>
     </ul>
-    All field agents instructed to document any Veil contact immediately. Do not engage without prior clearance from Division Lead or on-site Operations Commander.
-  </div>
 
-  <div class="section">
-    <div class="label">RECOMMENDED THREAT LEVEL:</div>
-    Tier 2 – Passive Monitored Entity (Revised Q2 2025)
-  </div>
+    <blockquote>
+      <strong>THREAT ASSESSMENT:</strong><br><br>
+      Low-visibility, high-persistence actor. Tolerated due to cooperative stance and pre-emptive containment capability.<br><br>
+      Long-term threat potential: Moderate. Monitor closely for shifts in doctrine or leadership emergence.
+    </blockquote>
 
+    <a href="intelligence.html" class="back" onclick="playBeep();">&larr; Return to Intelligence & Analysis Division</a>
+  </main>
+  <footer>
+    APA INTERNAL USE ONLY – UNAUTHORIZED ACCESS WILL BE LOGGED
+  </footer>
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <script>
+    function playBeep() {
+      let audio = document.getElementById('sfx');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  </script>
 </body>
 </html>
