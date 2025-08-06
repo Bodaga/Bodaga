@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APA INTERNAL PORTAL – Talent Acquisition Request</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #0d0d0d;
+      color: #00ff99;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ff99;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      background-color: #000000;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      font-family: 'Courier New', monospace;
+    }
+
+    button {
+      background-color: #000000;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+    }
+
+    button:hover {
+      background-color: #003322;
+    }
+
+    .beep {
+      display: none;
+    }
+
+    a {
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <h1>Submit Talent Acquisition Request</h1>
+  <form id="acquisitionForm">
+    <label for="requesterName">Your Name / Codename:</label>
+    <input type="text" id="requesterName" name="requesterName" required>
+
+    <label for="division">Requesting Division:</label>
+    <select id="division" name="division" required>
+      <option value="Operations">Operations</option>
+      <option value="Intelligence & Analysis">Intelligence & Analysis</option>
+      <option value="Research">Research</option>
+      <option value="Logistics & Engineering">Logistics & Engineering</option>
+      <option value="HR">HR</option>
+    </select>
+
+    <label for="targetProfile">Target Profile:</label>
+    <input type="text" id="targetProfile" name="targetProfile" placeholder="Name, alias, or general profile">
+
+    <label for="justification">Justification for Acquisition:</label>
+    <textarea id="justification" name="justification" rows="6" placeholder="Please include known skills, assets, current affiliations, and any prior contact." required></textarea>
+
+    <label for="urgency">Urgency Level:</label>
+    <select id="urgency" name="urgency" required>
+      <option value="Low">Low</option>
+      <option value="Moderate">Moderate</option>
+      <option value="Elevated">Elevated</option>
+      <option value="Immediate / Priority 1">Immediate / Priority 1</option>
+    </select>
+
+    <label for="preferredMethod">Preferred Method of Acquisition:</label>
+    <select id="preferredMethod" name="preferredMethod">
+      <option value="Direct Employment Offer">Direct Employment Offer</option>
+      <option value="Covert Induction">Covert Induction</option>
+      <option value="Black Bag Relocation">Black Bag Relocation</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="notes">Additional Notes / Operational Constraints:</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Leave blank if not applicable."></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <p><a href="/APA-Internal-HR.html">← Return to HR Portal</a></p>
+
+  <audio id="beep" class="beep">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.getElementById("acquisitionForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const beep = document.getElementById("beep");
+      beep.volume = 0.2;
+      beep.play();
+      alert("Request Submitted.\nA member of the Talent Acquisition Unit will review shortly.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
