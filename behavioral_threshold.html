@@ -63,15 +63,26 @@
     </blockquote>
   </section>
 
-  <a href="research.html" class="button" onclick="playBeep();">&larr; Return to Research Division</a>
 
-  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-  <script>
-    function playBeep() {
-      let audio = document.getElementById('sfx');
-      audio.currentTime = 0;
-      audio.play();
-    }
-  </script>
+  <a href="research.html" class="button" id="backLink">&larr; Return to Research Division</a>
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+  const audio = document.getElementById('sfx');
+  const backLink = document.getElementById('backLink');
+
+  backLink.addEventListener('click', function (e) {
+    e.preventDefault(); // prevent instant nav
+
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      setTimeout(() => {
+        window.location.href = backLink.href;
+      }, 300); // delay nav to allow sound
+    }).catch(() => {
+      // fallback if sound fails
+      window.location.href = backLink.href;
+    });
+  });
+</script>
 </body>
 </html>
