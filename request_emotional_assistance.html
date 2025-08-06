@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Emotional Assistance</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #041f4a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .button {
+      background-color: #0f62fe;
+      color: white;
+      padding: 20px 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0353e9;
+    }
+    #confirmation {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="beepSound">
+    <source src="beep.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>Request Emotional Assistance</h1>
+  <button class="button" onclick="submitRequest()">Submit Request</button>
+  <div id="confirmation"></div>
+
+  <script>
+    function submitRequest() {
+      document.getElementById("beepSound").play();
+      document.getElementById("confirmation").innerText = "Request Logged";
+      setTimeout(function () {
+        window.location.href = "hr.html";
+      }, 2000);
+    }
+  </script>
+</body>
+
+</html>
