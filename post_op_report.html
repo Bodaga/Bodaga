@@ -150,24 +150,24 @@
   const confirmation = document.getElementById('confirmation');
 
   // Play beep, then navigate with a small delay before playing beep for better browser compatibility
-  function playBeepAndNavigate(e) {
+   function playBeepAndNavigate(e) {
     console.log("Back link clicked!");
     e.preventDefault();
     audio.currentTime = 0;
-
+  
     setTimeout(() => {
       audio.play().then(() => {
         setTimeout(() => {
           console.log("Navigating now...");
-          window.location.href = e.currentTarget.href;
+          window.location.href = backLink.href; // use backLink.href instead of e.currentTarget.href
         }, 300);
       }).catch(() => {
         console.log("Navigation fallback");
-        window.location.href = e.currentTarget.href;
+        window.location.href = backLink.href;
       });
     }, 50);
-
-    return false; // just to be safe
+  
+    return false;
   }
 
   // Submit form using fetch (AJAX-style)
