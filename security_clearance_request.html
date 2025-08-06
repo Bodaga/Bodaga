@@ -1,199 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>APA INTERNAL PORTAL – Internal Security Clearance Request</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #0b0e1c;
-    color: #d0d0d0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-  }
-  header {
-    width: 100%;
-    padding: 1rem;
-    background-color: #141824;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header img {
-    max-width: 100px;
-    margin-bottom: 0.5rem;
-  }
-  h1 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: #00b0c0;
-    text-align: center;
-  }
-  main {
-    padding: 2rem;
-    max-width: 600px;
-    width: 100%;
-    text-align: center; 
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  label {
-    margin-top: 1rem;
-    color: #00b0c0;
-  }
-  input, textarea, select {
-    background-color: #141824;
-    color: #d0d0d0;
-    border: 1px solid #00b0c0;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  textarea {
-    resize: vertical;
-  }
-  button {
-    align-self: center;
-    margin-top: 1.5rem;
-    background-color: #0b0e1c;
-    color: #00b0c0;
-    border: 1px solid #00b0c0;
-    padding: 0.6rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  button:hover {
-    background-color: #00b0c0;
-    color: #0b0e1c;
-  }
-  a.back {
-    display: inline-block;
-    margin-top: 1.5rem;
-    color: #00b0c0;
-    text-decoration: none;
-    border: 1px solid #00b0c0;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  a.back:hover {
-    background-color: #00b0c0;
-    color: #0b0e1c;
-  }
-  footer {
-    padding: 1rem;
-    font-size: 0.8rem;
-    color: #555;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APA INTERNAL PORTAL – Internal Security Clearance Request</title>
+  <link rel="icon" href="https://dummyimage.com/32x32/00b0c0/ffffff&text=A" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      padding: 1rem;
+      background-color: #141824;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #00b0c0;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 1rem;
+      color: #00b0c0;
+    }
+    input, textarea, select {
+      background-color: #141824;
+      color: #d0d0d0;
+      border: 1px solid #00b0c0;
+      border-radius: 4px;
+      padding: 0.5rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      align-self: center;
+      margin-top: 1.5rem;
+      background-color: #0b0e1c;
+      color: #00b0c0;
+      border: 1px solid #00b0c0;
+      padding: 0.6rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    .back-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    a.back {
+      color: #00b0c0;
+      text-decoration: none;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    a.back:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    #confirmation {
+      margin-top: 1rem;
+      display: none;
+      font-weight: bold;
+    }
+    footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
-  <h1>APA INTERNAL PORTAL: INTERNAL SECURITY CLEARANCE REQUEST</h1>
-</header>
-<main>
-  <form id="clearanceForm">
-    <label for="requesterName">Requesting Agent Name / Department</label>
-    <input type="text" id="requesterName" name="requesterName" required />
+  <header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>APA INTERNAL PORTAL: INTERNAL SECURITY CLEARANCE REQUEST</h1>
+  </header>
+  <main>
+    <form id="clearanceForm">
+      <label for="requesterName">Requesting Agent Name / Department</label>
+      <input type="text" id="requesterName" name="requesterName" required />
 
-    <label for="clearanceLevel">Requested Clearance Level</label>
-    <select id="clearanceLevel" name="clearanceLevel" required>
-      <option value="" disabled selected>Select level</option>
-      <option value="Green">Green</option>
-      <option value="Yellow">Yellow</option>
-      <option value="Orange">Orange</option>
-      <option value="Red">Red</option>
-    </select>
+      <label for="clearanceLevel">Requested Clearance Level</label>
+      <select id="clearanceLevel" name="clearanceLevel" required>
+        <option value="" disabled selected>Select level</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Orange">Orange</option>
+        <option value="Red">Red</option>
+      </select>
 
-    <label for="justification">Access Justification</label>
-    <textarea id="justification" name="justification" rows="6" required></textarea>
+      <label for="justification">Access Justification</label>
+      <textarea id="justification" name="justification" rows="6" required></textarea>
 
-    <label for="duration">Access Duration (if temporary)</label>
-    <input type="text" id="duration" name="duration" placeholder="e.g., 48 hours, until project close" />
+      <label for="duration">Access Duration (if temporary)</label>
+      <input type="text" id="duration" name="duration" placeholder="e.g., 48 hours, until project close" />
 
-    <button type="submit">Submit Request</button>
-  </form>
-  <div id="confirmation" style="margin-top: 1rem; display: none; color: #00ff80; font-weight: bold;"></div>
-  <a href="research.html" class="back">&larr; Return to Research Division</a>
-</main>
-<footer>
-  APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
-</footer>
-<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<script>
-  const audio = document.getElementById('sfx');
-  const form = document.getElementById('clearanceForm');
-  const backLink = document.querySelector('a.back');
-  const confirmation = document.getElementById('confirmation');
+      <button type="submit">Submit Request</button>
+    </form>
 
-  // Play beep, then navigate with a small delay before playing beep for better browser compatibility
-   function playBeepAndNavigate(e) {
-    console.log("Back link clicked!");
-    e.preventDefault();
-    audio.currentTime = 0;
-  
-    setTimeout(() => {
+    <div id="confirmation"></div>
+
+    <div class="back-container">
+      <a href="research.html" class="back">&larr; Return to Research Division</a>
+    </div>
+  </main>
+  <footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+  </footer>
+
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+  <script>
+    const audio = document.getElementById('sfx');
+    const form = document.getElementById('clearanceForm');
+    const backLink = document.querySelector('a.back');
+    const confirmation = document.getElementById('confirmation');
+
+    function playBeepAndNavigate(e) {
+      e.preventDefault();
+      if (!backLink) return;
+      audio.currentTime = 0;
+      setTimeout(() => {
+        audio.play().then(() => {
+          setTimeout(() => {
+            window.location.href = backLink.href;
+          }, 300);
+        }).catch(() => {
+          window.location.href = backLink.href;
+        });
+      }, 50);
+    }
+
+    function playBeepAndSubmit(e) {
+      e.preventDefault();
+      audio.currentTime = 0;
       audio.play().then(() => {
-        setTimeout(() => {
-          console.log("Navigating now...");
-          window.location.href = backLink.href; // use backLink.href instead of e.currentTarget.href
-        }, 300);
-      }).catch(() => {
-        console.log("Navigation fallback");
-        window.location.href = backLink.href;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch("https://httpbin.org/post", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+          confirmation.style.color = "#00ff80";
+          confirmation.textContent = "✅ Request submitted successfully.";
+          confirmation.style.display = "block";
+          form.reset();
+        })
+        .catch(error => {
+          confirmation.style.color = "#ff5050";
+          confirmation.textContent = "⚠️ Submission failed. Please try again.";
+          confirmation.style.display = "block";
+        });
       });
-    }, 50);
-  
-    return false;
-  }
+    }
 
-  // Submit form using fetch (AJAX-style)
-  function playBeepAndSubmit(e) {
-    e.preventDefault(); // Prevent full page reload
-    audio.currentTime = 0;
-    audio.play().then(() => {
-      // Gather form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      // Send using fetch
-      fetch("https://httpbin.org/post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(result => {
-        console.log("Server response:", result);
-        confirmation.style.color = "#00ff80";
-        confirmation.textContent = "✅ Report submitted successfully.";
-        confirmation.style.display = "block";
-        form.reset(); // optional: clear form
-      })
-      .catch(error => {
-        console.error("Submission failed:", error);
-        confirmation.textContent = "⚠️ Submission failed. Please try again.";
-        confirmation.style.color = "#ff5050";
-        confirmation.style.display = "block";
-      });
-    });
-  }
-
-  backLink.addEventListener('click', playBeepAndNavigate);
-  form.addEventListener('submit', playBeepAndSubmit);
-</script>
+    if (backLink) backLink.addEventListener('click', playBeepAndNavigate);
+    form.addEventListener('submit', playBeepAndSubmit);
+  </script>
 </body>
 </html>
