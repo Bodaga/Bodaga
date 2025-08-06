@@ -149,17 +149,25 @@
   const backLink = document.querySelector('a.back');
   const confirmation = document.getElementById('confirmation');
 
-  // Play beep, then navigate
+  // Play beep, then navigate with a small delay before playing beep for better browser compatibility
   function playBeepAndNavigate(e) {
+    console.log("Back link clicked!");
     e.preventDefault();
     audio.currentTime = 0;
-    audio.play().then(() => {
-      setTimeout(() => {
+
+    setTimeout(() => {
+      audio.play().then(() => {
+        setTimeout(() => {
+          console.log("Navigating now...");
+          window.location.href = e.currentTarget.href;
+        }, 300);
+      }).catch(() => {
+        console.log("Navigation fallback");
         window.location.href = e.currentTarget.href;
-      }, 300);
-    }).catch(() => {
-      window.location.href = e.currentTarget.href;
-    });
+      });
+    }, 50);
+
+    return false; // just to be safe
   }
 
   // Submit form using fetch (AJAX-style)
@@ -182,6 +190,8 @@
       .then(response => response.json())
       .then(result => {
         console.log("Server response:", result);
+        confirmation.style.color = "#00ff80";
+        confirmation.textContent = "✅ Report submitted successfully.";
         confirmation.style.display = "block";
         form.reset(); // optional: clear form
       })
