@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APA INTERNAL PORTAL – Material Sciences: Anti-Magic Composites</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      color: #00b0c0;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    p, li {
+      color: #a0a0a0;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    a.button {
+      color: #00b0c0;
+      text-decoration: none;
+      border: 2px solid #00b0c0;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+  </style>
+</head>
+<body>
+  <h1>APA RESEARCH BRIEF – DEVELOPMENT OF ANTI-MAGIC COMPOSITES</h1>
+
+  <section>
+    <h2>OVERVIEW</h2>
+    <p>The APA Material Sciences team has recently advanced the development of anti-magic composites, focusing on the containment and suppression of active casters and artifacts through targeted material design. These efforts directly support field operations by reducing the threat level of magical entities during capture and transport.</p>
+  </section>
+
+  <section>
+    <h2>PROJECT FOCUS: ANTI-MAGIC HANDCUFFS</h2>
+    <p>Current prototypes utilize a base of refined lead alloy, which naturally disrupts mana flow, combined with unique counter-enchantments inlaid within the material matrix. The lead serves as a suppression conduit while the enchantments actively drain or disrupt spell matrices in contact with the cuffs.</p>
+    <ul>
+      <li>Effective in dampening spellcasting from restrained targets.</li>
+      <li>Reduces the ability to access prepared spells and mana pools while secured.</li>
+      <li>Tested on Class I–II entities and confirmed effective under stress conditions.</li>
+      <li>Field Ops report risk of extreme strength breaking these tools. Conjecture if this was due to faith-based magic is ongoing and research is inconclusive at this time.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>FUTURE DEVELOPMENT</h2>
+    <ul>
+      <li>Integration of resonance-disrupting sigils for additional suppression layers for faith-based magic.</li>
+      <li>Expansion to containment bars, cages, and transport modules using the same composite technology.</li>
+      <li>Mid-term goal of equipping all field operatives with lightweight anti-magic restraints instead of just strike teams.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>APA POSITION</h2>
+    <p>Anti-magic composites are critical for the secure capture and transport of magical entities and artifact containment. The APA prioritizes this technology to prevent veil breaches during field operations and to reduce operational risks from active casters.</p>
+  </section>
+
+  <a class="button" href="material_sciences.html">&larr; Material Sciences</a>
+
+  <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  <script>
+    function playBeepAndNavigate(e) {
+      e.preventDefault();
+      const audio = document.getElementById('sfx');
+      const link = e.currentTarget.getAttribute('href');
+
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().then(() => {
+          setTimeout(() => {
+            window.location.href = link;
+          }, 300);
+        }).catch(() => {
+          window.location.href = link;
+        });
+      } else {
+        window.location.href = link;
+      }
+    }
+
+    document.querySelectorAll('a.button').forEach(link => {
+      link.removeEventListener('click', playBeepAndNavigate);
+      link.addEventListener('click', playBeepAndNavigate);
+    });
+  </script>
+</body>
+</html>
