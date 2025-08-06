@@ -135,6 +135,8 @@
 <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
   const audio = document.getElementById('sfx');
+  const form = document.getElementById('postOpForm');
+  const backLink = document.querySelector('a.back');
 
   // Play beep, then navigate
   function playBeepAndNavigate(e) {
@@ -154,14 +156,15 @@
     e.preventDefault();
     audio.currentTime = 0;
     audio.play().then(() => {
-      e.target.submit();
+      form.submit(); // <-- use direct reference to the form
     }).catch(() => {
-      e.target.submit();
+      form.submit();
     });
   }
 
-  document.querySelector('a.back').addEventListener('click', playBeepAndNavigate);
-  document.getElementById('postOpForm').addEventListener('submit', playBeepAndSubmit);
+  backLink.addEventListener('click', playBeepAndNavigate);
+  form.addEventListener('submit', playBeepAndSubmit);
 </script>
+
 </body>
 </html>
