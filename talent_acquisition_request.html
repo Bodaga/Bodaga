@@ -1,157 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>APA Talent Acquisition Request</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talent Acquisition Request</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
     body {
-        margin: 0;
-        font-family: 'Courier New', Courier, monospace;
-        background-color: #0b0e1c;
-        color: #d0d0d0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-        text-align: center;
-        padding-top: 2rem;
-    }
-    header img {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 1rem;
+      background-color: #0b1526;
+      color: #c0d5f9;
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
     h1 {
-        color: #d0d0d0;
-        margin-bottom: 1rem;
-    }
-    p {
-        margin-bottom: 1.5rem;
-        color: #a0a0a0;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        margin: 0 auto;
+      color: #7fb4ff;
+      margin-bottom: 20px;
     }
     label {
-        margin-bottom: 0.5rem;
-        text-align: left;
+      display: block;
+      margin: 10px 0 5px;
     }
-    input, textarea, select {
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        border: 1px solid #00b0c0;
-        border-radius: 4px;
-        background-color: #1a1d2f;
-        color: #d0d0d0;
-        font-family: 'Courier New', Courier, monospace;
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #162239;
+      color: #c0d5f9;
+      border: 1px solid #445c7a;
     }
-    button {
-        padding: 0.75rem 1.5rem;
-        background-color: transparent;
-        color: #00b0c0;
-        border: 2px solid #00b0c0;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
+    input[type="submit"] {
+      background-color: #7fb4ff;
+      color: #0b1526;
+      border: none;
+      cursor: pointer;
     }
-    button:hover {
-        background-color: #00b0c0;
-        color: #0b0e1c;
+    input[type="submit"]:hover {
+      background-color: #5a9bf3;
     }
-    a {
-        margin-top: 1rem;
-        color: #00b0c0;
-        text-decoration: none;
-        border: 2px solid #00b0c0;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        display: inline-block;
-        transition: background-color 0.3s, color 0.3s;
+    .nav {
+      margin-top: 30px;
     }
-    a:hover {
-        background-color: #00b0c0;
-        color: #0b0e1c;
+    .nav a {
+      color: #7fb4ff;
+      text-decoration: none;
     }
-    footer {
-        margin-top: 2rem;
-        color: #606060;
-        font-size: 0.9rem;
+    .beep {
+      display: none;
     }
-</style>
+  </style>
 </head>
 <body>
-<header>
-    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
-    <h1>Talent Acquisition Request</h1>
-</header>
-<main>
-    <p>Submit a new candidate or resource for external acquisition.</p>
-    <form>
-        <label for="name">Subject Name:</label>
-        <input type="text" id="name" name="name" required />
+  <audio id="beep" class="beep" autoplay>
+    <source src="beep.mp3" type="audio/mpeg">
+  </audio>
 
-        <label for="location">Last Known Location:</label>
-        <input type="text" id="location" name="location" required />
+  <h1>Talent Acquisition Request</h1>
+  <form action="" method="post" onsubmit="submitRequest(event)">
+    <label for="division">Requesting Division</label>
+    <select id="division" name="division" required>
+      <option value="">-- Select Division --</option>
+      <option value="Operations">Operations</option>
+      <option value="Intelligence & Analysis">Intelligence & Analysis</option>
+      <option value="Research">Research</option>
+      <option value="Logistics & Engineering">Logistics & Engineering</option>
+      <option value="HR">HR</option>
+    </select>
 
-        <label for="reason">Acquisition Justification:</label>
-        <textarea id="reason" name="reason" rows="4" required></textarea>
+    <label for="position">Role / Specialization Needed</label>
+    <input type="text" id="position" name="position" required>
 
-        <label for="urgency">Urgency Level:</label>
-        <select id="urgency" name="urgency">
-            <option value="low">Low</option>
-            <option value="moderate">Moderate</option>
-            <option value="high">High</option>
-            <option value="critical">Critical</option>
-        </select>
+    <label for="urgency">Urgency Level</label>
+    <select id="urgency" name="urgency" required>
+      <option value="Low">Low</option>
+      <option value="Moderate">Moderate</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
 
-        <button type="submit">Submit Request</button>
-    </form>
-    <a href="hr.html">Return to HR Portal</a>
-</main>
-<footer>
-    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
-</footer>
+    <label for="justification">Justification</label>
+    <textarea id="justification" name="justification" rows="5" required></textarea>
 
-<!-- BEEP AUDIO + SCRIPT -->
-<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-<script>
-function playBeepAndNavigate(e) {
-    e.preventDefault();
-    const audio = document.getElementById('sfx');
-    const link = e.currentTarget.getAttribute('href');
+    <input type="submit" value="Submit Request">
+  </form>
 
-    if (audio) {
-        audio.currentTime = 0;
-        audio.play().then(() => {
-            setTimeout(() => {
-                window.location.href = link;
-            }, 300);
-        }).catch(() => {
-            window.location.href = link;
-        });
-    } else {
-        window.location.href = link;
+  <div id="confirmation" style="display: none;">
+    <p><strong>Request submitted successfully.</strong> HR will process the requisition.</p>
+  </div>
+
+  <div class="nav">
+    <a href="hr.html">&#8592; Return to HR Division</a>
+  </div>
+
+  <script>
+    function submitRequest(event) {
+      event.preventDefault();
+      document.querySelector("form").style.display = "none";
+      document.getElementById("confirmation").style.display = "block";
+      document.getElementById("beep").play();
     }
-}
-
-function attachAudioListeners() {
-    document.querySelectorAll('a[href]').forEach(link => {
-        link.removeEventListener('click', playBeepAndNavigate);
-        link.addEventListener('click', playBeepAndNavigate);
-    });
-}
-
-attachAudioListeners();
-
-window.addEventListener('pageshow', function () {
-    attachAudioListeners();
-});
-</script>
-
+  </script>
 </body>
 </html>
