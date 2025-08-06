@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA Human Resources Division</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #0b0e1c;
+        color: #d0d0d0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+    header img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        color: #d0d0d0;
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 2rem;
+        color: #a0a0a0;
+        max-width: 600px;
+    }
+    a {
+        color: #00b0c0;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin: 0.4rem;
+        border: 2px solid #00b0c0;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    a:hover {
+        background-color: #00b0c0;
+        color: #0b0e1c;
+    }
+    footer {
+        margin-top: 2rem;
+        color: #606060;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+<header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=HR" alt="HR Logo" />
+    <h1>APA Human Resources Division</h1>
+</header>
+<main>
+    <p><strong>Welcome to HR!</strong><br>We will let you know if we are needed.</p>
+
+    <a href="#">Payroll Portal (External - Unavailable)</a>
+
+    <a href="#">Talent Acquisition – Submit Request</a>
+    <a href="#">Talent Acquisition – Submit for Acquisition</a>
+
+    <a href="#">Onboarding & Induction Portal (Unavailable)</a>
+
+    <a href="#">Schedule Evaluation (Cognitive Stability)</a>
+    <a href="#">Request Emotional Assistance</a>
+
+    <a href="mailto:HR@APA.com">Contact HR</a>
+
+    <a href="index.html">← Return to Home</a>
+</main>
+<footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
+
+<!-- BEEP AUDIO + SCRIPT -->
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+function playBeepAndNavigate(e) {
+    e.preventDefault();
+
+    const audio = document.getElementById('sfx');
+    const link = e.currentTarget.getAttribute('href');
+
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play().then(() => {
+            setTimeout(() => {
+                window.location.href = link;
+            }, 300);
+        }).catch(() => {
+            window.location.href = link;
+        });
+    } else {
+        window.location.href = link;
+    }
+}
+
+function attachAudioListeners() {
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.removeEventListener('click', playBeepAndNavigate);
+        link.addEventListener('click', playBeepAndNavigate);
+    });
+}
+
+attachAudioListeners();
+
+window.addEventListener('pageshow', function () {
+    attachAudioListeners();
+});
+</script>
+</body>
+</html>
