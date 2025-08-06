@@ -141,31 +141,67 @@
 <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
 <script>
   const audio = document.getElementById('sfx');
+  const form = document.getElementById('postOpForm');
+  const backLink = document.querySelector('a.back');
+  const confirmation = document.getElementById('confirmation');
 
-  function playBeepAndNavigate(e) {
+  // Play beep, then navigate with a small delay before playing beep for better browser compatibility
+   function playBeepAndNavigate(e) {
+    console.log("Back link clicked!");
     e.preventDefault();
     audio.currentTime = 0;
-    audio.play().then(() => {
-      setTimeout(() => {
-        window.location.href = e.currentTarget.href;
-      }, 300);
-    }).catch(() => {
-      window.location.href = e.currentTarget.href;
-    });
+  
+    setTimeout(() => {
+      audio.play().then(() => {
+        setTimeout(() => {
+          console.log("Navigating now...");
+          window.location.href = backLink.href; // use backLink.href instead of e.currentTarget.href
+        }, 300);
+      }).catch(() => {
+        console.log("Navigation fallback");
+        window.location.href = backLink.href;
+      });
+    }, 50);
+  
+    return false;
   }
 
+  // Submit form using fetch (AJAX-style)
   function playBeepAndSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent full page reload
     audio.currentTime = 0;
     audio.play().then(() => {
-      e.target.submit();
-    }).catch(() => {
-      e.target.submit();
+      // Gather form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      // Send using fetch
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(result => {
+        console.log("Server response:", result);
+        confirmation.style.color = "#00ff80";
+        confirmation.textContent = "✅ Report submitted successfully.";
+        confirmation.style.display = "block";
+        form.reset(); // optional: clear form
+      })
+      .catch(error => {
+        console.error("Submission failed:", error);
+        confirmation.textContent = "⚠️ Submission failed. Please try again.";
+        confirmation.style.color = "#ff5050";
+        confirmation.style.display = "block";
+      });
     });
   }
 
-  document.querySelector('a.back').addEventListener('click', playBeepAndNavigate);
-  document.getElementById('reportForm').addEventListener('submit', playBeepAndSubmit);
+  backLink.addEventListener('click', playBeepAndNavigate);
+  form.addEventListener('submit', playBeepAndSubmit);
 </script>
 </body>
 </html>
