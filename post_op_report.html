@@ -1,103 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>APA INTERNAL PORTAL – Submit Post-Op Report</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #0b0e1c;
-    color: #d0d0d0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-  }
-  header {
-    width: 100%;
-    padding: 1rem;
-    background-color: #141824;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  header img {
-    max-width: 100px;
-    margin-bottom: 0.5rem;
-  }
-  h1 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #00b0c0;
-    text-align: center;
-  }
-  main {
-    padding: 2rem;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-  }
-  label {
-    margin-top: 1rem;
-    color: #00b0c0;
-  }
-  input, textarea {
-    background-color: #141824;
-    color: #d0d0d0;
-    border: 1px solid #00b0c0;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  button {
-    margin-top: 1rem;
-    background-color: #0b0e1c;
-    color: #00b0c0;
-    border: 1px solid #00b0c0;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  button:hover {
-    background-color: #00b0c0;
-    color: #0b0e1c;
-  }
-  a.back {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #00b0c0;
-    text-decoration: none;
-    border: 1px solid #00b0c0;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  a.back:hover {
-    background-color: #00b0c0;
-    color: #0b0e1c;
-  }
-  footer {
-    padding: 1rem;
-    font-size: 0.8rem;
-    color: #555;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APA INTERNAL PORTAL – Submit Post-Op Report</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b0e1c;
+      color: #d0d0d0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      padding: 1rem;
+      background-color: #141824;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #00b0c0;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 500px;
+    }
+    label {
+      margin-top: 1rem;
+      color: #00b0c0;
+    }
+    input, textarea {
+      background-color: #141824;
+      color: #d0d0d0;
+      border: 1px solid #00b0c0;
+      border-radius: 4px;
+      padding: 0.5rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    button {
+      margin-top: 1rem;
+      background-color: #0b0e1c;
+      color: #00b0c0;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    button:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00b0c0;
+      text-decoration: none;
+      border: 1px solid #00b0c0;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    a.back:hover {
+      background-color: #00b0c0;
+      color: #0b0e1c;
+    }
+    #confirmation {
+      margin-top: 1rem;
+      color: #00ff80;
+      font-weight: bold;
+      display: none;
+    }
+    footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -105,7 +111,7 @@
   <h1>APA INTERNAL PORTAL: SUBMIT POST-OP REPORT</h1>
 </header>
 <main>
-  <form id="postOpForm" action="https://httpbin.org/post" method="POST">
+  <form id="postOpForm">
     <label for="agentName">Agent Name / Callsign</label>
     <input type="text" id="agentName" name="agentName" required />
 
@@ -126,6 +132,9 @@
 
     <button type="submit">Submit Report</button>
   </form>
+
+  <div id="confirmation">✅ Report submitted successfully.</div>
+
   <a href="operations.html" class="back" onclick="playBeep();">&larr; Return to Operations Division</a>
 </main>
 <footer>
@@ -133,10 +142,12 @@
 </footer>
 
 <audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
 <script>
   const audio = document.getElementById('sfx');
   const form = document.getElementById('postOpForm');
   const backLink = document.querySelector('a.back');
+  const confirmation = document.getElementById('confirmation');
 
   // Play beep, then navigate
   function playBeepAndNavigate(e) {
@@ -151,22 +162,40 @@
     });
   }
 
-  // Play beep, then let the form submit naturally
+  // Submit form using fetch (AJAX-style)
   function playBeepAndSubmit(e) {
-    e.preventDefault(); // Prevent immediate submission
+    e.preventDefault(); // Prevent full page reload
     audio.currentTime = 0;
     audio.play().then(() => {
-      setTimeout(() => {
-        form.submit(); // Resume natural submission
-      }, 300);
-    }).catch(() => {
-      form.submit();
+      // Gather form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      // Send using fetch
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(result => {
+        console.log("Server response:", result);
+        confirmation.style.display = "block";
+        form.reset(); // optional: clear form
+      })
+      .catch(error => {
+        console.error("Submission failed:", error);
+        confirmation.textContent = "⚠️ Submission failed. Please try again.";
+        confirmation.style.color = "#ff5050";
+        confirmation.style.display = "block";
+      });
     });
   }
 
   backLink.addEventListener('click', playBeepAndNavigate);
   form.addEventListener('submit', playBeepAndSubmit);
 </script>
-
 </body>
 </html>
