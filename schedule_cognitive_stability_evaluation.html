@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APA INTERNAL PORTAL – Schedule Cognitive Stability Evaluation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #101010;
+      color: #00ff99;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ff99;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #181818;
+      padding: 20px;
+      border: 1px solid #00ff99;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #000;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #ff0033;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc002a;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Schedule Evaluation – Cognitive Stability</h1>
+
+<form onsubmit="event.preventDefault(); alert('beep. Request submitted. Expect follow-up.');">
+  <label for="agentId">Agent ID</label>
+  <input type="text" id="agentId" name="agentId" required>
+
+  <label for="department">Division / Assignment</label>
+  <select id="department" name="department">
+    <option>Operations Division</option>
+    <option>Intelligence & Analysis</option>
+    <option>Research Division</option>
+    <option>Logistics & Engineering</option>
+    <option>HR Division</option>
+  </select>
+
+  <label for="exposure">Recent Exposure to Non-Standard Phenomena?</label>
+  <select id="exposure" name="exposure">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+    <option value="unsure">Unsure</option>
+  </select>
+
+  <label for="symptoms">Notable Symptoms (tick all that apply)</label>
+  <select id="symptoms" name="symptoms" multiple>
+    <option>Derealization</option>
+    <option>Auditory Distortions</option>
+    <option>Compromised Memory Recall</option>
+    <option>Compulsion to Disclose Confidential Information</option>
+    <option>Sudden Ideological Shifts</option>
+    <option>Visual Hallucinations (organic/non-organic)</option>
+    <option>Repeated Dreams (non-personal)</option>
+    <option>Other (describe below)</option>
+  </select>
+
+  <label for="details">Additional Details / Manifestations</label>
+  <textarea id="details" name="details" rows="4"></textarea>
+
+  <button type="submit">SUBMIT FOR EVALUATION</button>
+</form>
+
+<div class="footer">
+  <p><a href="HR_Main.html">Return to HR Main</a></p>
+</div>
+
+</body>
+</html>
