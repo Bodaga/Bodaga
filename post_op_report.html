@@ -151,12 +151,14 @@
     });
   }
 
-  // Play beep and then submit form
+  // Play beep, then let the form submit naturally
   function playBeepAndSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent immediate submission
     audio.currentTime = 0;
     audio.play().then(() => {
-      form.submit(); // <-- use direct reference to the form
+      setTimeout(() => {
+        form.submit(); // Resume natural submission
+      }, 300);
     }).catch(() => {
       form.submit();
     });
