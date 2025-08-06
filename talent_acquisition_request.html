@@ -1,119 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>APA INTERNAL PORTAL – Talent Acquisition Request</title>
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APA Talent Acquisition Request</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      background-color: #0d0d0d;
-      color: #00ff99;
-      padding: 20px;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #0b0e1c;
+        color: #d0d0d0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        text-align: center;
+        padding-top: 2rem;
     }
-
-    h1, h2 {
-      color: #00ff99;
+    header img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
     }
-
+    h1 {
+        color: #d0d0d0;
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        color: #a0a0a0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+    }
     label {
-      display: block;
-      margin-top: 15px;
+        margin-bottom: 0.5rem;
+        text-align: left;
     }
-
-    input, select, textarea {
-      background-color: #000000;
-      border: 1px solid #00ff99;
-      color: #00ff99;
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      font-family: 'Courier New', monospace;
+    input, textarea, select {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #00b0c0;
+        border-radius: 4px;
+        background-color: #1a1d2f;
+        color: #d0d0d0;
+        font-family: 'Courier New', Courier, monospace;
     }
-
     button {
-      background-color: #000000;
-      border: 1px solid #00ff99;
-      color: #00ff99;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
-      font-family: 'Courier New', monospace;
+        padding: 0.75rem 1.5rem;
+        background-color: transparent;
+        color: #00b0c0;
+        border: 2px solid #00b0c0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
     }
-
     button:hover {
-      background-color: #003322;
+        background-color: #00b0c0;
+        color: #0b0e1c;
     }
-
-    .beep {
-      display: none;
-    }
-
     a {
-      color: #00ff99;
+        margin-top: 1rem;
+        color: #00b0c0;
+        text-decoration: none;
+        border: 2px solid #00b0c0;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
     }
-  </style>
+    a:hover {
+        background-color: #00b0c0;
+        color: #0b0e1c;
+    }
+    footer {
+        margin-top: 2rem;
+        color: #606060;
+        font-size: 0.9rem;
+    }
+</style>
 </head>
 <body>
-  <h1>Submit Talent Acquisition Request</h1>
-  <form id="acquisitionForm">
-    <label for="requesterName">Your Name / Codename:</label>
-    <input type="text" id="requesterName" name="requesterName" required>
+<header>
+    <img src="https://dummyimage.com/200x200/00b0c0/ffffff&text=APA" alt="APA Logo" />
+    <h1>Talent Acquisition Request</h1>
+</header>
+<main>
+    <p>Submit a new candidate or resource for external acquisition.</p>
+    <form>
+        <label for="name">Subject Name:</label>
+        <input type="text" id="name" name="name" required />
 
-    <label for="division">Requesting Division:</label>
-    <select id="division" name="division" required>
-      <option value="Operations">Operations</option>
-      <option value="Intelligence & Analysis">Intelligence & Analysis</option>
-      <option value="Research">Research</option>
-      <option value="Logistics & Engineering">Logistics & Engineering</option>
-      <option value="HR">HR</option>
-    </select>
+        <label for="location">Last Known Location:</label>
+        <input type="text" id="location" name="location" required />
 
-    <label for="targetProfile">Target Profile:</label>
-    <input type="text" id="targetProfile" name="targetProfile" placeholder="Name, alias, or general profile">
+        <label for="reason">Acquisition Justification:</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
 
-    <label for="justification">Justification for Acquisition:</label>
-    <textarea id="justification" name="justification" rows="6" placeholder="Please include known skills, assets, current affiliations, and any prior contact." required></textarea>
+        <label for="urgency">Urgency Level:</label>
+        <select id="urgency" name="urgency">
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+        </select>
 
-    <label for="urgency">Urgency Level:</label>
-    <select id="urgency" name="urgency" required>
-      <option value="Low">Low</option>
-      <option value="Moderate">Moderate</option>
-      <option value="Elevated">Elevated</option>
-      <option value="Immediate / Priority 1">Immediate / Priority 1</option>
-    </select>
+        <button type="submit">Submit Request</button>
+    </form>
+    <a href="hr.html">Return to HR Portal</a>
+</main>
+<footer>
+    APA INTERNAL USE ONLY - UNAUTHORIZED ACCESS WILL BE LOGGED
+</footer>
 
-    <label for="preferredMethod">Preferred Method of Acquisition:</label>
-    <select id="preferredMethod" name="preferredMethod">
-      <option value="Direct Employment Offer">Direct Employment Offer</option>
-      <option value="Covert Induction">Covert Induction</option>
-      <option value="Black Bag Relocation">Black Bag Relocation</option>
-      <option value="Other">Other</option>
-    </select>
+<!-- BEEP AUDIO + SCRIPT -->
+<audio id="sfx" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+<script>
+function playBeepAndNavigate(e) {
+    e.preventDefault();
+    const audio = document.getElementById('sfx');
+    const link = e.currentTarget.getAttribute('href');
 
-    <label for="notes">Additional Notes / Operational Constraints:</label>
-    <textarea id="notes" name="notes" rows="4" placeholder="Leave blank if not applicable."></textarea>
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play().then(() => {
+            setTimeout(() => {
+                window.location.href = link;
+            }, 300);
+        }).catch(() => {
+            window.location.href = link;
+        });
+    } else {
+        window.location.href = link;
+    }
+}
 
-    <button type="submit">Submit Request</button>
-  </form>
-
-  <p><a href="/APA-Internal-HR.html">← Return to HR Portal</a></p>
-
-  <audio id="beep" class="beep">
-    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
-    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    document.getElementById("acquisitionForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const beep = document.getElementById("beep");
-      beep.volume = 0.2;
-      beep.play();
-      alert("Request Submitted.\nA member of the Talent Acquisition Unit will review shortly.");
-      this.reset();
+function attachAudioListeners() {
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.removeEventListener('click', playBeepAndNavigate);
+        link.addEventListener('click', playBeepAndNavigate);
     });
-  </script>
+}
+
+attachAudioListeners();
+
+window.addEventListener('pageshow', function () {
+    attachAudioListeners();
+});
+</script>
+
 </body>
 </html>
