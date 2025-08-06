@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule Evaluation (Cognitive Stability)</title>
+  <style>
+    body {
+      background-color: #0b162b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #5ab0f7;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background-color: #5ab0f7;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      color: #000000;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #7ac1ff;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #5ab0f7;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Schedule Evaluation – Cognitive Stability</h1>
+  <button id="requestBtn">Submit Request</button>
+  <div id="message"></div>
+
+  <audio id="beep" src="beep.mp3" preload="auto"></audio>
+
+  <script>
+    const button = document.getElementById("requestBtn");
+    const message = document.getElementById("message");
+    const beep = document.getElementById("beep");
+
+    button.addEventListener("click", () => {
+      beep.play();
+      message.textContent = "Request Logged.";
+      setTimeout(() => {
+        window.location.href = "hr.html";
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
